@@ -378,51 +378,85 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Live Demo</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Try our image generation service in real-time</p>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Experience Z Image API in action</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-2 rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                    <iframe 
-                        src="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" 
-                        frameborder="0" 
-                        width="100%" 
-                        height="600"
-                        title="Z Image Demo"
-                        loading="lazy"
-                        class="w-full">
-                    </iframe>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
+                    <div class="flex items-center justify-center bg-gradient-to-br from-primary-50 to-gray-50 rounded-xl h-80 mb-6 border-2 border-dashed border-gray-300">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600 font-medium mb-2">Interactive Demo</p>
+                            <p class="text-sm text-gray-500">Try it on Hugging Face</p>
+                        </div>
+                    </div>
+                    <a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-center w-full px-6 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all hover:shadow-lg">
+                        Launch Live Demo
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-gray-200">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Demo Features</h3>
-                    <ul class="space-y-3 text-gray-600 mb-6">
+
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">What You Can Try</h3>
+                    <ul class="space-y-4 mb-8">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Real-time image generation</span>
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Real-time Generation</h4>
+                                <p class="text-gray-600 text-sm">Generate high-quality images in under 1 second</p>
+                            </div>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>English and Chinese text support</span>
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Text in Images</h4>
+                                <p class="text-gray-600 text-sm">Support for English and Chinese characters</p>
+                            </div>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Customizable parameters</span>
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Custom Parameters</h4>
+                                <p class="text-gray-600 text-sm">Adjust size, steps, and guidance settings</p>
+                            </div>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Instant preview and download</span>
+                            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Download Results</h4>
+                                <p class="text-gray-600 text-sm">Instant preview and download generated images</p>
+                            </div>
                         </li>
                     </ul>
-                    <a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 transition-colors">
-                        Open Full Demo
-                    </a>
+                    <div class="bg-primary-50 rounded-lg p-4 border border-primary-200">
+                        <p class="text-sm text-primary-800">
+                            <svg class="w-4 h-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <strong>Note:</strong> Demo hosted on Hugging Face Spaces for public testing
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
