@@ -72,6 +72,111 @@ html {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
+/* Ensure form inputs are interactive */
+input, select, textarea, button {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Ensure form container is interactive */
+form {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix for input fields */
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+select {
+    background-color: white !important;
+    cursor: text;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Make sure waitlist section is always visible and interactive */
+#waitlist {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+#waitlist * {
+    pointer-events: auto !important;
+}
+
+/* Force all inputs to be editable */
+#waitlistForm input,
+#waitlistForm select,
+#waitlistForm textarea {
+    pointer-events: auto !important;
+    background-color: white !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1001 !important;
+    -webkit-user-select: auto !important;
+    user-select: auto !important;
+}
+
+#waitlistForm input[type="text"],
+#waitlistForm input[type="email"],
+#waitlistForm textarea {
+    cursor: text !important;
+}
+
+#waitlistForm select {
+    cursor: pointer !important;
+}
+
+#waitlistForm input[type="checkbox"] {
+    cursor: pointer !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Ensure input focus works */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #3b82f6 !important;
+    outline-offset: 2px;
+}
+
+/* Remove any conflicting styles */
+input:disabled,
+select:disabled,
+textarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Ensure button is clickable */
+button {
+    cursor: pointer !important;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
+
 /* Waitlist form success animation */
 .success-message {
     animation: fadeIn 0.5s ease-in;

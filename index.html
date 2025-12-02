@@ -1303,7 +1303,7 @@ except Exception as e:
     </section>
 
     <!-- Waitlist Section -->
-    <section id="waitlist" class="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+    <section id="waitlist" class="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white" style="position: relative; z-index: 1; opacity: 1 !important; transform: none !important;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -1367,8 +1367,10 @@ except Exception as e:
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl p-8 shadow-xl">
-                    <form id="waitlistForm">
+                <div class="bg-white rounded-xl p-8 shadow-xl" style="position: relative; z-index: 999; pointer-events: auto !important; opacity: 1 !important;">
+                    <!-- Form using Formspree - Replace YOUR_FORM_ID with your actual Formspree form ID -->
+                    <!-- Get your free form at https://formspree.io/ -->
+                    <form id="waitlistForm" action="https://formspree.io/f/mgvgynlw" method="POST" style="pointer-events: auto !important; position: relative; z-index: 1000;">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Join the Waitlist</h3>
                         <p class="text-gray-600 mb-6">Get notified when we launch our API service</p>
                         
@@ -1381,7 +1383,8 @@ except Exception as e:
                                 required 
                                 placeholder="John Doe"
                                 autocomplete="name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                style="pointer-events: auto !important; background-color: white !important; cursor: text !important;"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
                             >
                         </div>
 
@@ -1394,7 +1397,8 @@ except Exception as e:
                                 required 
                                 placeholder="john@example.com"
                                 autocomplete="email"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                style="pointer-events: auto !important; background-color: white !important; cursor: text !important;"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
                             >
                         </div>
 
@@ -1406,13 +1410,14 @@ except Exception as e:
                                 name="company" 
                                 placeholder="Your company or project name"
                                 autocomplete="organization"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                style="pointer-events: auto !important; background-color: white !important; cursor: text !important;"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
                             >
                         </div>
 
                         <div class="mb-4">
                             <label for="useCase" class="block text-sm font-medium text-gray-700 mb-2">What will you build with Z Image API?</label>
-                            <select id="useCase" name="useCase" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                            <select id="useCase" name="useCase" required style="pointer-events: auto !important; background-color: white !important; cursor: pointer !important;" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white">
                                 <option value="">Select your use case...</option>
                                 <option value="creative">Creative Applications</option>
                                 <option value="ecommerce">E-commerce & Marketing</option>
@@ -1425,7 +1430,7 @@ except Exception as e:
 
                         <div class="mb-4">
                             <label for="estimatedVolume" class="block text-sm font-medium text-gray-700 mb-2">Estimated Monthly Volume</label>
-                            <select id="estimatedVolume" name="estimatedVolume" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                            <select id="estimatedVolume" name="estimatedVolume" style="pointer-events: auto !important; background-color: white !important; cursor: pointer !important;" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white">
                                 <option value="">Select volume...</option>
                                 <option value="low">< 10,000 images/month</option>
                                 <option value="medium">10,000 - 50,000 images/month</option>
@@ -1435,13 +1440,13 @@ except Exception as e:
                         </div>
 
                         <div class="mb-6">
-                            <label class="flex items-center">
-                                <input type="checkbox" id="newsletter" name="newsletter" checked class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked style="pointer-events: auto !important; cursor: pointer !important;" class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500">
                                 <span class="ml-2 text-sm text-gray-600">Send me updates about Z Image API and new features</span>
                             </label>
                         </div>
 
-                        <button type="submit" class="w-full px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors" id="submitBtn">
+                        <button type="submit" class="w-full px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="submitBtn">
                             <span class="btn-text">Join Waitlist Now</span>
                             <span class="btn-loading hidden">Submitting...</span>
                         </button>
