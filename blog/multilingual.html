@@ -70,30 +70,30 @@
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <ul class="space-y-2 text-gray-700">
                             <li class="flex items-center">
-                                <span class="mr-2">🇺🇸</span>English
+                                <span class="mr-2">????</span>English
                             </li>
                             <li class="flex items-center">
-                                <span class="mr-2">🇨🇳</span>Chinese (Simplified & Traditional)
+                                <span class="mr-2">????</span>Chinese (Simplified & Traditional)
                             </li>
                             <li class="flex items-center">
-                                <span class="mr-2">🇯🇵</span>Japanese
+                                <span class="mr-2">????</span>Japanese
                             </li>
                             <li class="flex items-center">
-                                <span class="mr-2">🇰🇷</span>Korean
+                                <span class="mr-2">????</span>Korean
                             </li>
                         </ul>
                         <ul class="space-y-2 text-gray-700">
                             <li class="flex items-center">
-                                <span class="mr-2">🇪🇸</span>Spanish
+                                <span class="mr-2">????</span>Spanish
                             </li>
                             <li class="flex items-center">
-                                <span class="mr-2">🇫🇷</span>French
+                                <span class="mr-2">????</span>French
                             </li>
                             <li class="flex items-center">
-                                <span class="mr-2">🇩🇪</span>German
+                                <span class="mr-2">????</span>German
                             </li>
                             <li class="flex items-center">
-                                <span class="mr-2">🌍</span>And more...
+                                <span class="mr-2">??</span>And more...
                             </li>
                         </ul>
                     </div>
@@ -104,13 +104,13 @@
 result = api.generate("A cute panda in bamboo forest")
 
 # Chinese prompt
-result = api.generate("一只可爱的熊猫在竹林中")
+result = api.generate("һֻ�ɰ�����è��������")
 
 # Japanese prompt
-result = api.generate("竹林の中のかわいいパンダ")
+result = api.generate("���֤��ФΤ��襤���ѥ��")
 
 # Mixed languages
-result = api.generate("Modern office 现代办公室 with tech elements")</code></pre>
+result = api.generate("Modern office �ִ��칫�� with tech elements")</code></pre>
 
                     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Building a Multilingual Generator</h2>
                     <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm">class MultilingualImageGenerator:
@@ -118,9 +118,9 @@ result = api.generate("Modern office 现代办公室 with tech elements")</code>
         self.api = ZImageAPI(api_key)
         self.templates = {
             'en': "High quality commercial photography, {subject}, {style} style",
-            'zh': "高质量商业摄影，{subject}，{style}风格",
-            'ja': "高品質の商業写真、{subject}、{style}スタイル",
-            'es': "Fotografía comercial de alta calidad, {subject}, estilo {style}"
+            'zh': "��������ҵ��Ӱ��{subject}��{style}���",
+            'ja': "��Ʒ�|���̘Iд�桢{subject}��{style}��������",
+            'es': "Fotograf��a comercial de alta calidad, {subject}, estilo {style}"
         }
     
     def generate(self, subject, style, language='en'):
@@ -133,8 +133,8 @@ generator = MultilingualImageGenerator(api_key)
 
 # Generate for different markets
 generator.generate("coffee", "minimalist", language='en')  # English market
-generator.generate("咖啡", "极简", language='zh')  # Chinese market
-generator.generate("コーヒー", "ミニマリスト", language='ja')  # Japanese market</code></pre>
+generator.generate("����", "����", language='zh')  # Chinese market
+generator.generate("���`�ҩ`", "�ߥ˥ޥꥹ��", language='ja')  # Japanese market</code></pre>
 
                     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Language Detection</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">Automatically detect user input language:</p>
@@ -238,12 +238,12 @@ def culturally_adapted_generate(base_prompt, culture):
     return api.generate(enhanced_prompt)</code></pre>
 
                     <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-lg">
-                        <p class="font-semibold text-yellow-900 mb-2">💡 Best Practices</p>
+                        <p class="font-semibold text-yellow-900 mb-2">?? Best Practices</p>
                         <ul class="space-y-2 text-yellow-800">
-                            <li>• Use clear, concise language descriptions</li>
-                            <li>• Avoid overly complex cultural-specific slang</li>
-                            <li>• Provide context for keywords</li>
-                            <li>• Test different language versions for effectiveness</li>
+                            <li>? Use clear, concise language descriptions</li>
+                            <li>? Avoid overly complex cultural-specific slang</li>
+                            <li>? Provide context for keywords</li>
+                            <li>? Test different language versions for effectiveness</li>
                         </ul>
                     </div>
 
@@ -254,7 +254,7 @@ def culturally_adapted_generate(base_prompt, culture):
                     </div>
 
                     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Conclusion</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">Multilingual support is more than just translating text—it's about cultural adaptation and user experience. Z Image API's powerful multilingual capabilities help you easily build global applications.</p>
+                    <p class="text-gray-700 leading-relaxed mb-6">Multilingual support is more than just translating text��it's about cultural adaptation and user experience. Z Image API's powerful multilingual capabilities help you easily build global applications.</p>
 
                     <p class="text-gray-700 leading-relaxed mb-6">Start exploring the possibilities of <a href="../index.html#waitlist" class="text-primary-600 hover:text-primary-700 font-semibold underline">multilingual image generation</a> today!</p>
                 </div>

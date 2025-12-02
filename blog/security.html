@@ -65,10 +65,10 @@
                 <div class="prose prose-lg max-w-none">
                     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. API Key Security Management</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">Never hardcode API keys in your code. Use environment variables:</p>
-                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm"># ❌ Wrong approach
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm"># ? Wrong approach
 api = ZImageAPI(api_key="sk-1234567890abcdef")
 
-# ✅ Correct approach
+# ? Correct approach
 import os
 from dotenv import load_dotenv
 
@@ -181,34 +181,34 @@ class AuditLogger:
         })</code></pre>
 
                     <div class="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
-                        <p class="font-semibold text-red-900 mb-2">⚠️ Security Alert</p>
+                        <p class="font-semibold text-red-900 mb-2">?? Security Alert</p>
                         <p class="text-red-800">If you suspect your API key has been compromised, immediately revoke it in your dashboard and generate a new one.</p>
                     </div>
 
                     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Security Checklist</h2>
                     <ul class="space-y-2 text-gray-700 mb-6">
                         <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✓</span>
+                            <span class="text-green-600 mr-2">?</span>
                             <span>API keys removed from code</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✓</span>
+                            <span class="text-green-600 mr-2">?</span>
                             <span>Using HTTPS for encrypted transmission</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✓</span>
+                            <span class="text-green-600 mr-2">?</span>
                             <span>Rate limiting implemented</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✓</span>
+                            <span class="text-green-600 mr-2">?</span>
                             <span>Input validation in place</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✓</span>
+                            <span class="text-green-600 mr-2">?</span>
                             <span>Audit logging configured</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✓</span>
+                            <span class="text-green-600 mr-2">?</span>
                             <span>Regular API key rotation</span>
                         </li>
                     </ul>
