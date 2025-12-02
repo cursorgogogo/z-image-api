@@ -107,7 +107,7 @@ All content can be edited directly in `index.html`. The structure is clearly com
 ### Adding Your Domain
 Update the Open Graph and Twitter meta tags in `index.html`:
 ```html
-<meta property="og:url" content="https://yourdomain.com">
+<meta property="og:url" content="https://zimageapi.com">
 ```
 
 ## 📱 Responsive Breakpoints

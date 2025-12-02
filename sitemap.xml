@@ -4,53 +4,112 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
-    <!-- Main page -->
+    <!-- Main Pages -->
     <url>
-        <loc>https://yourdomain.com/</loc>
+        <loc>https://zimageapi.com/</loc>
         <lastmod>2025-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
-    <!-- Features Section -->
     <url>
-        <loc>https://yourdomain.com/#features</loc>
+        <loc>https://zimageapi.com/blog.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Main Page Sections -->
+    <url>
+        <loc>https://zimageapi.com/#features</loc>
         <lastmod>2025-12-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Demo Section -->
     <url>
-        <loc>https://yourdomain.com/#demo</loc>
-        <lastmod>2025-12-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Tutorial Section -->
-    <url>
-        <loc>https://yourdomain.com/#tutorial</loc>
-        <lastmod>2025-12-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Python Guide Section -->
-    <url>
-        <loc>https://yourdomain.com/#python-guide</loc>
-        <lastmod>2025-12-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- GitHub Section -->
-    <url>
-        <loc>https://yourdomain.com/#github</loc>
+        <loc>https://zimageapi.com/#use-cases</loc>
         <lastmod>2025-12-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/#api-preview</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/#pricing</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/#tutorial</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/#python-guide</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/#waitlist</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Blog Articles -->
+    <url>
+        <loc>https://zimageapi.com/blog/python-sdk.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/blog/comparison.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/blog/multilingual.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/blog/production-optimization.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/blog/security.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://zimageapi.com/blog/use-cases.html</loc>
+        <lastmod>2025-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     
 </urlset>
-
