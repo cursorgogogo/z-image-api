@@ -13,7 +13,7 @@ Sitemap: https://zimageapi.com/sitemap.xml
 Crawl-delay: 1
 
 # Allow all public pages
-Allow: /index.html
+Allow: /
 Allow: /blog.html
 Allow: /blog/
 Allow: /*.html$
