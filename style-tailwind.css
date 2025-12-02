@@ -122,23 +122,35 @@ input[type="checkbox"] {
     pointer-events: auto !important;
 }
 
-/* Force all inputs to be editable */
-#waitlistForm input,
-#waitlistForm select,
-#waitlistForm textarea {
+/* Waitlist form inputs - Force visibility and interactivity */
+#waitlist,
+#waitlistForm,
+#waitlistForm * {
     pointer-events: auto !important;
-    background-color: white !important;
-    opacity: 1 !important;
-    position: relative !important;
-    z-index: 1001 !important;
-    -webkit-user-select: auto !important;
     user-select: auto !important;
 }
 
 #waitlistForm input[type="text"],
 #waitlistForm input[type="email"],
-#waitlistForm textarea {
+#waitlistForm textarea,
+#waitlistForm select {
+    background-color: white !important;
+    color: #111827 !important;
     cursor: text !important;
+    opacity: 1 !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+    -webkit-text-fill-color: #111827 !important;
+    position: relative !important;
+    z-index: 1001 !important;
+}
+
+#waitlistForm input::placeholder,
+#waitlistForm textarea::placeholder {
+    color: #9ca3af !important;
+    opacity: 1 !important;
 }
 
 #waitlistForm select {
@@ -147,6 +159,7 @@ input[type="checkbox"] {
 
 #waitlistForm input[type="checkbox"] {
     cursor: pointer !important;
+    opacity: 1 !important;
     width: 16px !important;
     height: 16px !important;
 }
