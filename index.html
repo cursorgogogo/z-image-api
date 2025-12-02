@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Z Image API - Advanced AI Image Generation for Developers | Python Integration</title>
+    <meta name="title" content="Z Image API - Advanced AI Image Generation for Developers | Python Integration">
+    <meta name="description" content="Discover Z Image API, the fastest open-source AI image generation tool. Complete Python tutorial, GitHub integration, and comprehensive documentation for developers.">
+    <meta name="keywords" content="Z image api python, Z image api github, Z image api tutorial, Z Image, AI image generation, text-to-image API, open source image API, Tongyi MAI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Z Image API - Advanced AI Image Generation for Developers">
+    <meta property="og:description" content="Fastest open-source AI image generation API with Python support. Generate stunning images in under a second with dual-language text rendering.">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Z Image API - Advanced AI Image Generation">
+    <meta property="twitter:description" content="Fastest open-source AI image generation API with Python support and comprehensive tutorials.">
+    <meta property="twitter:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Z Image API",
+      "description": "Open-source AI image generation API with Python integration and comprehensive tutorials",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cross-platform",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "programmingLanguage": "Python"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">🎨</span>
+                <span class="brand-name">Z Image API</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#api-preview">API</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#waitlist" class="btn-waitlist">Early Access</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Z Image API: Revolutionary AI Image Generation</h1>
+                <p class="hero-subtitle">The fastest open-source text-to-image API with comprehensive Python integration and developer-friendly documentation</p>
+                <div class="hero-buttons">
+                    <a href="#tutorial" class="btn btn-primary">Get Started Tutorial</a>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on GitHub</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">&lt; 1s</div>
+                        <div class="stat-label">Generation Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">16GB</div>
+                        <div class="stat-label">Min VRAM</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Open Source</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Z Image API?</h2>
+            <p class="section-subtitle">Powerful features designed for modern developers</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Generate high-quality images in under a second using the optimized Turbo model architecture</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐍</div>
+                    <h3>Python Integration</h3>
+                    <p>Seamless Python API with comprehensive documentation and easy-to-follow code examples</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Dual-Language Support</h3>
+                    <p>Advanced text rendering in both English and Chinese with perfect accuracy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Consumer GPU Ready</h3>
+                    <p>Optimized to run efficiently on consumer-grade GPUs with 16GB+ VRAM</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Open Source</h3>
+                    <p>Released under Apache 2.0 license - free for commercial and personal use</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Developer Focused</h3>
+                    <p>Complete API documentation, tutorials, and GitHub resources for rapid integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <h2 class="section-title">Real-World Use Cases</h2>
+            <p class="section-subtitle">See how developers and businesses leverage Z Image API</p>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🎨</div>
+                    <h3>Creative Applications</h3>
+                    <p>Build AI-powered design tools, art generators, and creative platforms with instant image generation capabilities.</p>
+                    <ul class="use-case-list">
+                        <li>AI art generation apps</li>
+                        <li>Design automation tools</li>
+                        <li>Marketing asset creation</li>
+                        <li>Social media content generators</li>
+                    </ul>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🛍️</div>
+                    <h3>E-commerce & Marketing</h3>
+                    <p>Generate product mockups, promotional images, and personalized marketing materials at scale.</p>
+                    <ul class="use-case-list">
+                        <li>Product visualization</li>
+                        <li>Dynamic ad generation</li>
+                        <li>Personalized recommendations</li>
+                        <li>Catalog enrichment</li>
+                    </ul>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🎮</div>
+                    <h3>Gaming & Entertainment</h3>
+                    <p>Create game assets, character designs, and immersive visual content for interactive experiences.</p>
+                    <ul class="use-case-list">
+                        <li>Game asset generation</li>
+                        <li>Character concept art</li>
+                        <li>Virtual world creation</li>
+                        <li>NFT artwork production</li>
+                    </ul>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📚</div>
+                    <h3>Education & Publishing</h3>
+                    <p>Enhance educational content with custom illustrations, diagrams, and visual learning materials.</p>
+                    <ul class="use-case-list">
+                        <li>Educational illustrations</li>
+                        <li>Book cover designs</li>
+                        <li>Infographic creation</li>
+                        <li>Learning material visuals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">Why Z Image API Stands Out</h2>
+            <p class="section-subtitle">Compare us with other AI image generation solutions</p>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight-column">Z Image API</th>
+                            <th>Other Solutions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Generation Speed</td>
+                            <td class="highlight-column"><strong>&lt; 1 second</strong></td>
+                            <td>5-30 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Open Source</td>
+                            <td class="highlight-column"><span class="check">✓</span> Apache 2.0</td>
+                            <td><span class="cross">✗</span> Proprietary</td>
+                        </tr>
+                        <tr>
+                            <td>Python Integration</td>
+                            <td class="highlight-column"><span class="check">✓</span> Native Support</td>
+                            <td>Limited or REST only</td>
+                        </tr>
+                        <tr>
+                            <td>Dual-Language Text</td>
+                            <td class="highlight-column"><span class="check">✓</span> English & Chinese</td>
+                            <td><span class="cross">✗</span> Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Self-Hosting</td>
+                            <td class="highlight-column"><span class="check">✓</span> Full Control</td>
+                            <td><span class="cross">✗</span> Cloud Only</td>
+                        </tr>
+                        <tr>
+                            <td>Hardware Requirements</td>
+                            <td class="highlight-column">16GB+ Consumer GPU</td>
+                            <td>Enterprise GPU Required</td>
+                        </tr>
+                        <tr>
+                            <td>Commercial Use</td>
+                            <td class="highlight-column"><span class="check">✓</span> Unlimited</td>
+                            <td>Restrictions Apply</td>
+                        </tr>
+                        <tr>
+                            <td>API Service (Coming Soon)</td>
+                            <td class="highlight-column"><span class="badge">🚀 Early Access</span></td>
+                            <td>Expensive per request</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="comparison-cta">
+                <p>Ready to experience the difference?</p>
+                <a href="#waitlist" class="btn btn-primary">Join Our Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Experience Z Image Turbo</h2>
+            <p class="section-subtitle">Try the live demo and see the power of Z Image API in action</p>
+            <div class="demo-container">
+                <div class="demo-embed">
+                    <iframe 
+                        src="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" 
+                        frameborder="0" 
+                        width="100%" 
+                        height="600"
+                        title="Z Image Turbo Demo"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="demo-info">
+                    <h3>Interactive Demo Features</h3>
+                    <ul>
+                        <li>Real-time image generation from text prompts</li>
+                        <li>Support for both English and Chinese inputs</li>
+                        <li>Advanced parameter customization</li>
+                        <li>Instant preview and download capabilities</li>
+                    </ul>
+                    <a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Open Full Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Preview Section -->
+    <section id="api-preview" class="api-preview">
+        <div class="container">
+            <h2 class="section-title">Z Image API Service (Coming Soon)</h2>
+            <p class="section-subtitle">Enterprise-ready API service with global availability and premium support</p>
+            
+            <div class="api-preview-content">
+                <div class="api-info">
+                    <div class="api-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span class="badge-text">Coming Soon</span>
+                    </div>
+                    <h3>Hosted API Service</h3>
+                    <p>We're building a fully managed API service so you don't have to worry about infrastructure, scaling, or maintenance. Focus on your application while we handle the complexity.</p>
+                    
+                    <div class="api-features">
+                        <div class="api-feature-item">
+                            <span class="feature-check">✓</span>
+                            <div>
+                                <strong>Global Edge Network</strong>
+                                <p>Sub-100ms latency worldwide</p>
+                            </div>
+                        </div>
+                        <div class="api-feature-item">
+                            <span class="feature-check">✓</span>
+                            <div>
+                                <strong>99.9% Uptime SLA</strong>
+                                <p>Enterprise-grade reliability</p>
+                            </div>
+                        </div>
+                        <div class="api-feature-item">
+                            <span class="feature-check">✓</span>
+                            <div>
+                                <strong>Auto-scaling</strong>
+                                <p>Handle any traffic volume</p>
+                            </div>
+                        </div>
+                        <div class="api-feature-item">
+                            <span class="feature-check">✓</span>
+                            <div>
+                                <strong>Priority Support</strong>
+                                <p>Direct access to our team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-code-preview">
+                    <h4>Simple API Integration</h4>
+                    <p>Easy-to-use RESTful API with Python, JavaScript, and cURL support</p>
+                    <div class="code-block">
+                        <button class="copy-btn" aria-label="Copy code">Copy</button>
+                        <pre><code># Python Example (Coming Soon)
+import requests
+
+api_key = "your_api_key_here"
+url = "https://api.z-image.ai/v1/generate"
+
+response = requests.post(url, 
+    headers={"Authorization": f"Bearer {api_key}"},
+    json={
+        "prompt": "A beautiful sunset over mountains",
+        "width": 1024,
+        "height": 1024,
+        "steps": 4
+    }
+)
+
+image_url = response.json()["image_url"]
+print(f"Generated: {image_url}")</code></pre>
+                    </div>
+                    
+                    <div class="api-notification">
+                        <p><strong>Be the first to know!</strong> Join our waitlist to get early access and exclusive launch pricing.</p>
+                        <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Flexible Pricing for Every Need</h2>
+            <p class="section-subtitle">Choose the plan that fits your project - from hobby to enterprise</p>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Self-Hosted (Free)</span>
+                <label class="switch">
+                    <input type="checkbox" id="pricingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Managed API <span class="badge-small">Coming Soon</span></span>
+            </div>
+
+            <div class="pricing-grid" id="selfHostedPricing">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Open Source</h3>
+                        <div class="price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/forever</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Full source code access</li>
+                        <li><span class="check">✓</span> Self-hosted deployment</li>
+                        <li><span class="check">✓</span> Unlimited generations</li>
+                        <li><span class="check">✓</span> Commercial use allowed</li>
+                        <li><span class="check">✓</span> Community support</li>
+                        <li><span class="check">✓</span> Apache 2.0 license</li>
+                    </ul>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Self-Hosted Pro</h3>
+                        <div class="price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/forever</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Everything in Open Source</li>
+                        <li><span class="check">✓</span> Your own infrastructure</li>
+                        <li><span class="check">✓</span> Complete control</li>
+                        <li><span class="check">✓</span> No API costs</li>
+                        <li><span class="check">✓</span> Data privacy guaranteed</li>
+                        <li><span class="check">✓</span> Customizable models</li>
+                    </ul>
+                    <a href="#tutorial" class="btn btn-outline">View Tutorial</a>
+                </div>
+            </div>
+
+            <div class="pricing-grid hidden" id="apiPricing">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="price-amount">$29</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="price-note">Perfect for side projects</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 10,000 images/month</li>
+                        <li><span class="check">✓</span> Standard speed</li>
+                        <li><span class="check">✓</span> Email support</li>
+                        <li><span class="check">✓</span> API documentation</li>
+                        <li><span class="check">✓</span> $0.003 per extra image</li>
+                        <li><span class="cross">✗</span> Priority queue</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="price-amount">$99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="price-note">Best for growing businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 50,000 images/month</li>
+                        <li><span class="check">✓</span> Priority processing</li>
+                        <li><span class="check">✓</span> Priority support (24h)</li>
+                        <li><span class="check">✓</span> Advanced features</li>
+                        <li><span class="check">✓</span> $0.002 per extra image</li>
+                        <li><span class="check">✓</span> Custom rate limits</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="price-amount">Custom</span>
+                        </div>
+                        <p class="price-note">Tailored for your needs</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Unlimited images</li>
+                        <li><span class="check">✓</span> Dedicated infrastructure</li>
+                        <li><span class="check">✓</span> 24/7 phone support</li>
+                        <li><span class="check">✓</span> Custom SLA</li>
+                        <li><span class="check">✓</span> On-premise deployment</li>
+                        <li><span class="check">✓</span> Training & onboarding</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+
+            <div class="pricing-footer">
+                <p class="pricing-note">💡 <strong>Launch Special:</strong> Early adopters who join our waitlist will receive <strong>50% off</strong> for the first 6 months!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Section -->
+    <section id="tutorial" class="tutorial">
+        <div class="container">
+            <h2 class="section-title">Z Image API Tutorial: Complete Guide</h2>
+            <p class="section-subtitle">Step-by-step tutorial to get started with Z Image API</p>
+            
+            <div class="tutorial-content">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Installation & Setup</h3>
+                        <p>Begin by cloning the Z Image API repository from GitHub and installing the required dependencies.</p>
+                        <div class="code-block">
+                            <button class="copy-btn" aria-label="Copy code">Copy</button>
+                            <pre><code># Clone the repository from GitHub
+git clone https://github.com/Tongyi-MAI/Z-Image.git
+cd Z-Image
+
+# Install dependencies
+pip install -r requirements.txt</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>System Requirements</h3>
+                        <p>Ensure your system meets the minimum requirements for running Z Image API:</p>
+                        <ul>
+                            <li>Python 3.8 or higher</li>
+                            <li>CUDA-compatible GPU with 16GB+ VRAM</li>
+                            <li>PyTorch 2.0 or later</li>
+                            <li>Sufficient storage for model weights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Download Model Weights</h3>
+                        <p>Download the pre-trained Z Image model weights from the official repository.</p>
+                        <div class="code-block">
+                            <button class="copy-btn" aria-label="Copy code">Copy</button>
+                            <pre><code># Download model weights
+python download_models.py --model turbo</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Basic Usage</h3>
+                        <p>Start generating images with simple Python code. See the Python guide below for detailed examples.</p>
+                        <div class="code-block">
+                            <button class="copy-btn" aria-label="Copy code">Copy</button>
+                            <pre><code># Basic image generation example
+from zimage import ZImageAPI
+
+api = ZImageAPI()
+image = api.generate("A beautiful sunset over mountains")
+image.save("output.png")</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-cta">
+                <p>Ready to dive deeper into the Z Image API?</p>
+                <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Full Documentation on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Python Guide Section -->
+    <section id="python-guide" class="python-guide">
+        <div class="container">
+            <h2 class="section-title">Z Image API Python Guide</h2>
+            <p class="section-subtitle">Comprehensive Python integration examples and best practices</p>
+            
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <h3>Basic Implementation</h3>
+                    <p>Simple Python script to generate your first image using Z Image API:</p>
+                    <div class="code-block">
+                        <button class="copy-btn" aria-label="Copy code">Copy</button>
+                        <pre><code>import torch
+from zimage import ZImagePipeline
+
+# Initialize the pipeline
+pipeline = ZImagePipeline.from_pretrained(
+    "Tongyi-MAI/Z-Image-Turbo",
+    torch_dtype=torch.float16
+)
+pipeline = pipeline.to("cuda")
+
+# Generate image
+prompt = "A futuristic city at night"
+image = pipeline(
+    prompt=prompt,
+    num_inference_steps=4,
+    guidance_scale=0.0
+).images[0]
+
+# Save the result
+image.save("generated_image.png")</code></pre>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <h3>Advanced Configuration</h3>
+                    <p>Customize generation parameters for optimal results:</p>
+                    <div class="code-block">
+                        <button class="copy-btn" aria-label="Copy code">Copy</button>
+                        <pre><code>from zimage import ZImagePipeline
+
+pipeline = ZImagePipeline.from_pretrained(
+    "Tongyi-MAI/Z-Image-Turbo"
+)
+
+# Advanced parameters
+image = pipeline(
+    prompt="Your detailed prompt here",
+    negative_prompt="unwanted elements",
+    height=1024,
+    width=1024,
+    num_inference_steps=4,
+    guidance_scale=0.0,
+    seed=42  # For reproducibility
+).images[0]
+
+image.save("advanced_output.png")</code></pre>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <h3>Batch Processing</h3>
+                    <p>Efficiently generate multiple images with Python loops:</p>
+                    <div class="code-block">
+                        <button class="copy-btn" aria-label="Copy code">Copy</button>
+                        <pre><code>from zimage import ZImagePipeline
+
+pipeline = ZImagePipeline.from_pretrained(
+    "Tongyi-MAI/Z-Image-Turbo"
+)
+
+prompts = [
+    "A serene lake at dawn",
+    "A bustling marketplace",
+    "An ancient temple"
+]
+
+for idx, prompt in enumerate(prompts):
+    image = pipeline(prompt=prompt).images[0]
+    image.save(f"batch_image_{idx}.png")
+    print(f"Generated image {idx + 1}/{len(prompts)}")</code></pre>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <h3>Error Handling</h3>
+                    <p>Robust Python code with proper exception handling:</p>
+                    <div class="code-block">
+                        <button class="copy-btn" aria-label="Copy code">Copy</button>
+                        <pre><code>from zimage import ZImagePipeline
+import torch
+
+try:
+    pipeline = ZImagePipeline.from_pretrained(
+        "Tongyi-MAI/Z-Image-Turbo"
+    )
+    
+    image = pipeline(
+        prompt="Your prompt",
+        num_inference_steps=4
+    ).images[0]
+    
+    image.save("output.png")
+    print("Image generated successfully!")
+    
+except torch.cuda.OutOfMemoryError:
+    print("GPU out of memory. Try reducing image size.")
+except Exception as e:
+    print(f"Error occurred: {str(e)}")</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="python-resources">
+                <h3>Additional Python Resources</h3>
+                <div class="resources-grid">
+                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h4>GitHub Repository</h4>
+                        <p>Complete source code and documentation</p>
+                    </a>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image/tree/main/examples" target="_blank" rel="noopener noreferrer" class="resource-card">
+                        <div class="resource-icon">💡</div>
+                        <h4>Code Examples</h4>
+                        <p>Ready-to-use Python scripts</p>
+                    </a>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image/issues" target="_blank" rel="noopener noreferrer" class="resource-card">
+                        <div class="resource-icon">🤝</div>
+                        <h4>Community Support</h4>
+                        <p>Get help from developers</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="github-section">
+        <div class="container">
+            <h2 class="section-title">Open Source on GitHub</h2>
+            <p class="section-subtitle">Join the Z Image API community and contribute to the future of AI image generation</p>
+            
+            <div class="github-content">
+                <div class="github-info">
+                    <h3>Why GitHub?</h3>
+                    <ul>
+                        <li>Access to complete source code and model architecture</li>
+                        <li>Regular updates and bug fixes from Tongyi MAI team</li>
+                        <li>Active community discussions and feature requests</li>
+                        <li>Comprehensive documentation and examples</li>
+                        <li>Apache 2.0 license for commercial use</li>
+                    </ul>
+                    <div class="github-buttons">
+                        <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                            Star on GitHub
+                        </a>
+                        <a href="https://github.com/Tongyi-MAI/Z-Image/fork" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Fork Repository</a>
+                    </div>
+                </div>
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <div class="stat-title">Repository</div>
+                        <div class="stat-value">Tongyi-MAI/Z-Image</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">License</div>
+                        <div class="stat-value">Apache 2.0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Language</div>
+                        <div class="stat-value">Python</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is Z Image API?</h3>
+                    <p>Z Image API is an open-source, lightning-fast text-to-image generation API developed by Tongyi MAI. It can generate high-quality images in under a second using the Turbo model architecture, with full Python integration and comprehensive documentation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I integrate Z Image API with Python?</h3>
+                    <p>Integration is straightforward using our Python SDK. Simply install the package from GitHub, import the ZImagePipeline class, and start generating images with just a few lines of code. Check our Python guide section for detailed examples.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are the system requirements?</h3>
+                    <p>Z Image API requires Python 3.8+, a CUDA-compatible GPU with at least 16GB VRAM, and PyTorch 2.0 or later. The API is optimized to run efficiently on consumer-grade hardware.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is Z Image API free to use?</h3>
+                    <p>Yes! Z Image API is completely open-source and released under the Apache 2.0 license, which means you can use it freely for both personal and commercial projects.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where can I find the GitHub repository?</h3>
+                    <p>The official Z Image API repository is available at <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer">github.com/Tongyi-MAI/Z-Image</a>. You'll find complete source code, documentation, examples, and community support.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I contribute to the project?</h3>
+                    <p>Absolutely! We welcome contributions from the community. Visit our GitHub repository to report issues, submit pull requests, or participate in discussions about new features and improvements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="waitlist">
+        <div class="container">
+            <div class="waitlist-content">
+                <div class="waitlist-info">
+                    <span class="waitlist-badge">🎉 Early Access Program</span>
+                    <h2 class="section-title">Be Among the First to Experience Our API Service</h2>
+                    <p class="waitlist-description">Join our exclusive waitlist and get:</p>
+                    <ul class="waitlist-benefits">
+                        <li>
+                            <span class="benefit-icon">🎁</span>
+                            <div>
+                                <strong>50% Launch Discount</strong>
+                                <p>Save 50% for the first 6 months</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">⚡</span>
+                            <div>
+                                <strong>Priority Access</strong>
+                                <p>Be first to test our managed API</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">💎</span>
+                            <div>
+                                <strong>Exclusive Credits</strong>
+                                <p>10,000 free API calls at launch</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">📈</span>
+                            <div>
+                                <strong>Beta Features</strong>
+                                <p>Early access to new capabilities</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="social-proof">
+                        <div class="avatars">
+                            <div class="avatar">👨‍💻</div>
+                            <div class="avatar">👩‍💼</div>
+                            <div class="avatar">👨‍🎨</div>
+                            <div class="avatar">👩‍🔬</div>
+                        </div>
+                        <p><strong>1,247+ developers</strong> already on the waitlist</p>
+                    </div>
+                </div>
+
+                <div class="waitlist-form-container">
+                    <form class="waitlist-form" id="waitlistForm">
+                        <h3>Join the Waitlist</h3>
+                        <p class="form-subtitle">Get notified when we launch our API service</p>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                required 
+                                placeholder="John Doe"
+                                autocomplete="name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="john@example.com"
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Project (Optional)</label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company" 
+                                placeholder="Your company or project name"
+                                autocomplete="organization"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="useCase">What will you build with Z Image API?</label>
+                            <select id="useCase" name="useCase" required>
+                                <option value="">Select your use case...</option>
+                                <option value="creative">Creative Applications</option>
+                                <option value="ecommerce">E-commerce & Marketing</option>
+                                <option value="gaming">Gaming & Entertainment</option>
+                                <option value="education">Education & Publishing</option>
+                                <option value="saas">SaaS Product</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estimatedVolume">Estimated Monthly Volume</label>
+                            <select id="estimatedVolume" name="estimatedVolume">
+                                <option value="">Select volume...</option>
+                                <option value="low">< 10,000 images/month</option>
+                                <option value="medium">10,000 - 50,000 images/month</option>
+                                <option value="high">50,000 - 200,000 images/month</option>
+                                <option value="enterprise">200,000+ images/month</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span>Send me updates about Z Image API and AI image generation</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full-width" id="submitBtn">
+                            <span class="btn-text">Join Waitlist Now</span>
+                            <span class="btn-loading hidden">Submitting...</span>
+                        </button>
+
+                        <p class="form-note">We respect your privacy. Unsubscribe anytime.</p>
+                    </form>
+
+                    <div class="success-message hidden" id="successMessage">
+                        <div class="success-icon">🎉</div>
+                        <h3>You're on the list!</h3>
+                        <p>Thank you for joining our waitlist. We'll notify you as soon as our API service launches.</p>
+                        <p class="success-note">Check your email for a confirmation message.</p>
+                        <div class="share-buttons">
+                            <p><strong>Share with your network:</strong></p>
+                            <div class="share-links">
+                                <a href="https://twitter.com/intent/tweet?text=Just%20joined%20the%20waitlist%20for%20Z%20Image%20API%20-%20the%20fastest%20AI%20image%20generation%20service!&url=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="share-btn twitter">Twitter</a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">LinkedIn</a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="share-btn facebook">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start Building with Z Image API Today</h2>
+            <p>Join thousands of developers using Z Image API to create stunning AI-generated images</p>
+            <div class="cta-buttons">
+                <a href="#tutorial" class="btn btn-primary btn-large">View Tutorial</a>
+                <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">Explore GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Z Image API</h4>
+                    <p>Advanced AI image generation for developers. Fast, powerful, and open-source.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#tutorial">Tutorial</a></li>
+                        <li><a href="#python-guide">Python Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                        <li><a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/issues" target="_blank" rel="noopener noreferrer">Community</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Developer</h4>
+                    <ul>
+                        <li><a href="https://github.com/Tongyi-MAI" target="_blank" rel="noopener noreferrer">Tongyi MAI</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/tree/main/examples" target="_blank" rel="noopener noreferrer">Examples</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Z Image API. Licensed under Apache 2.0. Built for developers by developers.</p>
+                <p class="footer-keywords">Keywords: Z image api python | Z image api github | Z image api tutorial</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+# Netlify configuration for Z Image API website
+
+[build]
+  publish = "."
+  command = "echo 'No build command needed for static site'"
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/docs"
+  to = "/#tutorial"
+  status = 301
+
+[[redirects]]
+  from = "/documentation"
+  to = "/#tutorial"
+  status = 301
+
+[[redirects]]
+  from = "/guide"
+  to = "/#python-guide"
+  status = 301
+
+[[redirects]]
+  from = "/demo"
+  to = "/#demo"
+  status = 301
+
+# 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Headers are defined in _headers file
+
+[dev]
+  command = "python -m http.server 8888"
+  port = 8888
+  targetPort = 8888
+  autoLaunch = true
+

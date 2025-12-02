@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Z Image API</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Z Image API homepage for tutorials, documentation, and demos.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.125rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #6366f1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .links h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .links ul {
+            list-style: none;
+        }
+
+        .links li {
+            margin: 0.75rem 0;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Oops! Page Not Found</h1>
+        <p>The page you're looking for doesn't exist. It might have been moved or deleted. Let's get you back on track with Z Image API.</p>
+        
+        <div class="buttons">
+            <a href="index.html" class="btn btn-primary">Return Home</a>
+            <a href="index.html#tutorial" class="btn btn-secondary">View Tutorial</a>
+        </div>
+
+        <div class="links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#demo">Live Demo</a></li>
+                <li><a href="index.html#python-guide">Python Guide</a></li>
+                <li><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank">GitHub Repository</a></li>
+                <li><a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank">Hugging Face Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Log 404 for analytics
+        console.log('404 Error - Page not found:', window.location.pathname);
+        
+        // Redirect after 10 seconds if user doesn't click anything
+        setTimeout(() => {
+            console.log('Auto-redirecting to homepage...');
+            // Uncomment the line below to enable auto-redirect
+            // window.location.href = 'index.html';
+        }, 10000);
+    </script>
+</body>
+</html>
+
