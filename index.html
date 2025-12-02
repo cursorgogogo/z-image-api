@@ -4,32 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Primary Meta Tags -->
-    <title>Z Image API - Advanced AI Image Generation for Developers | Python Integration</title>
-    <meta name="title" content="Z Image API - Advanced AI Image Generation for Developers | Python Integration">
-    <meta name="description" content="Discover Z Image API, the fastest open-source AI image generation tool. Complete Python tutorial, GitHub integration, and comprehensive documentation for developers.">
+    <title>Z Image API</title>
+    <meta name="title" content="Z Image API">
+    <meta name="description" content="Professional image generation API with Python SDK. Fast, reliable, and production-ready. Complete documentation and enterprise support.">
     <meta name="keywords" content="Z image api python, Z image api github, Z image api tutorial, Z Image, AI image generation, text-to-image API, open source image API, Tongyi MAI">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:title" content="Z Image API - Advanced AI Image Generation for Developers">
-    <meta property="og:description" content="Fastest open-source AI image generation API with Python support. Generate stunning images in under a second with dual-language text rendering.">
+    <meta property="og:title" content="Z Image API - High-Performance Image Generation Service">
+    <meta property="og:description" content="Professional image generation API with Python SDK. Sub-second response times, multilingual support, and enterprise-grade reliability.">
     <meta property="og:image" content="">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="Z Image API - Advanced AI Image Generation">
-    <meta property="twitter:description" content="Fastest open-source AI image generation API with Python support and comprehensive tutorials.">
+    <meta property="twitter:title" content="Z Image API - Image Generation Service">
+    <meta property="twitter:description" content="Professional image generation API with Python SDK and comprehensive documentation.">
     <meta property="twitter:image" content="">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
     
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style-tailwind.css">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -51,50 +74,73 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="logo-icon">🎨</span>
-                <span class="brand-name">Z Image API</span>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="text-xl font-bold text-gray-900">Z Image API</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Features</a>
+                    <a href="#use-cases" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Use Cases</a>
+                    <a href="#api-preview" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">API</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Pricing</a>
+                    <a href="#tutorial" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Docs</a>
+                    <a href="#waitlist" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Join Waitlist</a>
+                </div>
+                <button class="md:hidden p-2 text-gray-600" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#use-cases">Use Cases</a></li>
-                <li><a href="#api-preview">API</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#tutorial">Tutorial</a></li>
-                <li><a href="#waitlist" class="btn-waitlist">Early Access</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <!-- Mobile menu -->
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 font-medium">Features</a>
+                    <a href="#use-cases" class="text-gray-600 hover:text-gray-900 font-medium">Use Cases</a>
+                    <a href="#api-preview" class="text-gray-600 hover:text-gray-900 font-medium">API</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-medium">Pricing</a>
+                    <a href="#tutorial" class="text-gray-600 hover:text-gray-900 font-medium">Docs</a>
+                    <a href="#waitlist" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium text-center">Join Waitlist</a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Z Image API: Revolutionary AI Image Generation</h1>
-                <p class="hero-subtitle">The fastest open-source text-to-image API with comprehensive Python integration and developer-friendly documentation</p>
-                <div class="hero-buttons">
-                    <a href="#tutorial" class="btn btn-primary">Get Started Tutorial</a>
-                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on GitHub</a>
+    <section class="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                    Image Generation API for Developers
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    High-performance image generation service with Python SDK. Fast, reliable, and production-ready.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#tutorial" class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors">
+                        Get Started
+                    </a>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-medium rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors">
+                        View on GitHub
+                    </a>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">&lt; 1s</div>
-                        <div class="stat-label">Generation Time</div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2">&lt; 1s</div>
+                        <div class="text-gray-600">Response Time</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">16GB</div>
-                        <div class="stat-label">Min VRAM</div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2">99.9%</div>
+                        <div class="text-gray-600">Uptime SLA</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Open Source</div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2">Open</div>
+                        <div class="text-gray-600">Source Available</div>
                     </div>
                 </div>
             </div>
@@ -102,93 +148,134 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose Z Image API?</h2>
-            <p class="section-subtitle">Powerful features designed for modern developers</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Generate high-quality images in under a second using the optimized Turbo model architecture</p>
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Enterprise-Grade Features</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Built for scale, designed for developers</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">High Performance</h3>
+                    <p class="text-gray-600">Sub-second response times with optimized architecture for production workloads</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🐍</div>
-                    <h3>Python Integration</h3>
-                    <p>Seamless Python API with comprehensive documentation and easy-to-follow code examples</p>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Python SDK</h3>
+                    <p class="text-gray-600">Native Python client with type hints, comprehensive documentation, and code examples</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Dual-Language Support</h3>
-                    <p>Advanced text rendering in both English and Chinese with perfect accuracy</p>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Multilingual Support</h3>
+                    <p class="text-gray-600">Accurate text rendering in English and Chinese for global applications</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Consumer GPU Ready</h3>
-                    <p>Optimized to run efficiently on consumer-grade GPUs with 16GB+ VRAM</p>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Resource Efficient</h3>
+                    <p class="text-gray-600">Optimized for standard hardware configurations starting at 16GB VRAM</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Open Source</h3>
-                    <p>Released under Apache 2.0 license - free for commercial and personal use</p>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Open Source</h3>
+                    <p class="text-gray-600">Apache 2.0 licensed with full commercial use rights and self-hosting options</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Developer Focused</h3>
-                    <p>Complete API documentation, tutorials, and GitHub resources for rapid integration</p>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Complete Documentation</h3>
+                    <p class="text-gray-600">Comprehensive guides, API references, and integration tutorials for quick onboarding</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Use Cases Section -->
-    <section id="use-cases" class="use-cases">
-        <div class="container">
-            <h2 class="section-title">Real-World Use Cases</h2>
-            <p class="section-subtitle">See how developers and businesses leverage Z Image API</p>
-            <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="use-case-icon">🎨</div>
-                    <h3>Creative Applications</h3>
-                    <p>Build AI-powered design tools, art generators, and creative platforms with instant image generation capabilities.</p>
-                    <ul class="use-case-list">
-                        <li>AI art generation apps</li>
-                        <li>Design automation tools</li>
-                        <li>Marketing asset creation</li>
-                        <li>Social media content generators</li>
+    <section id="use-cases" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Use Cases</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Applications across industries and use cases</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Creative & Design</h3>
+                    <p class="text-gray-600 mb-4">Design automation tools, marketing asset creation, and content generation platforms</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Design automation tools</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Marketing asset creation</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Social media content</li>
                     </ul>
                 </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🛍️</div>
-                    <h3>E-commerce & Marketing</h3>
-                    <p>Generate product mockups, promotional images, and personalized marketing materials at scale.</p>
-                    <ul class="use-case-list">
-                        <li>Product visualization</li>
-                        <li>Dynamic ad generation</li>
-                        <li>Personalized recommendations</li>
-                        <li>Catalog enrichment</li>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">E-commerce & Retail</h3>
+                    <p class="text-gray-600 mb-4">Product visualization, catalog enrichment, and personalized marketing materials</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Product visualization</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Dynamic ad generation</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Catalog enrichment</li>
                     </ul>
                 </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🎮</div>
-                    <h3>Gaming & Entertainment</h3>
-                    <p>Create game assets, character designs, and immersive visual content for interactive experiences.</p>
-                    <ul class="use-case-list">
-                        <li>Game asset generation</li>
-                        <li>Character concept art</li>
-                        <li>Virtual world creation</li>
-                        <li>NFT artwork production</li>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Media & Entertainment</h3>
+                    <p class="text-gray-600 mb-4">Game assets, character designs, and visual content for interactive experiences</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Game asset generation</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Character concept art</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Visual content production</li>
                     </ul>
                 </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">📚</div>
-                    <h3>Education & Publishing</h3>
-                    <p>Enhance educational content with custom illustrations, diagrams, and visual learning materials.</p>
-                    <ul class="use-case-list">
-                        <li>Educational illustrations</li>
-                        <li>Book cover designs</li>
-                        <li>Infographic creation</li>
-                        <li>Learning material visuals</li>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Education & Publishing</h3>
+                    <p class="text-gray-600 mb-4">Custom illustrations, diagrams, and visual learning materials for educational content</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Educational illustrations</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Book cover designs</li>
+                        <li class="flex items-center"><span class="text-primary-600 mr-2">•</span> Infographic creation</li>
                     </ul>
                 </div>
             </div>
@@ -196,151 +283,209 @@
     </section>
 
     <!-- Comparison Section -->
-    <section class="comparison">
-        <div class="container">
-            <h2 class="section-title">Why Z Image API Stands Out</h2>
-            <p class="section-subtitle">Compare us with other AI image generation solutions</p>
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Competitive Advantages</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Compare with other image generation solutions</p>
+            </div>
+            <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+                <table class="w-full">
+                    <thead class="bg-gray-900 text-white">
                         <tr>
-                            <th>Feature</th>
-                            <th class="highlight-column">Z Image API</th>
-                            <th>Other Solutions</th>
+                            <th class="px-6 py-4 text-left font-semibold">Feature</th>
+                            <th class="px-6 py-4 text-left font-semibold bg-primary-600">Z Image API</th>
+                            <th class="px-6 py-4 text-left font-semibold">Other Solutions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Generation Speed</td>
-                            <td class="highlight-column"><strong>&lt; 1 second</strong></td>
-                            <td>5-30 seconds</td>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">Response Time</td>
+                            <td class="px-6 py-4 bg-primary-50 font-semibold text-primary-700">&lt; 1 second</td>
+                            <td class="px-6 py-4 text-gray-600">5-30 seconds</td>
                         </tr>
-                        <tr>
-                            <td>Open Source</td>
-                            <td class="highlight-column"><span class="check">✓</span> Apache 2.0</td>
-                            <td><span class="cross">✗</span> Proprietary</td>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">License</td>
+                            <td class="px-6 py-4 bg-primary-50">
+                                <span class="text-green-600 font-semibold">✓</span> Apache 2.0
+                            </td>
+                            <td class="px-6 py-4 text-gray-600">
+                                <span class="text-red-500">✗</span> Proprietary
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Python Integration</td>
-                            <td class="highlight-column"><span class="check">✓</span> Native Support</td>
-                            <td>Limited or REST only</td>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">Python SDK</td>
+                            <td class="px-6 py-4 bg-primary-50">
+                                <span class="text-green-600 font-semibold">✓</span> Native Support
+                            </td>
+                            <td class="px-6 py-4 text-gray-600">Limited or REST only</td>
                         </tr>
-                        <tr>
-                            <td>Dual-Language Text</td>
-                            <td class="highlight-column"><span class="check">✓</span> English & Chinese</td>
-                            <td><span class="cross">✗</span> Limited</td>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">Multilingual Text</td>
+                            <td class="px-6 py-4 bg-primary-50">
+                                <span class="text-green-600 font-semibold">✓</span> English & Chinese
+                            </td>
+                            <td class="px-6 py-4 text-gray-600">
+                                <span class="text-red-500">✗</span> Limited
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Self-Hosting</td>
-                            <td class="highlight-column"><span class="check">✓</span> Full Control</td>
-                            <td><span class="cross">✗</span> Cloud Only</td>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">Self-Hosting</td>
+                            <td class="px-6 py-4 bg-primary-50">
+                                <span class="text-green-600 font-semibold">✓</span> Full Control
+                            </td>
+                            <td class="px-6 py-4 text-gray-600">
+                                <span class="text-red-500">✗</span> Cloud Only
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Hardware Requirements</td>
-                            <td class="highlight-column">16GB+ Consumer GPU</td>
-                            <td>Enterprise GPU Required</td>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">Hardware</td>
+                            <td class="px-6 py-4 bg-primary-50 text-gray-900">16GB+ Consumer GPU</td>
+                            <td class="px-6 py-4 text-gray-600">Enterprise GPU Required</td>
                         </tr>
-                        <tr>
-                            <td>Commercial Use</td>
-                            <td class="highlight-column"><span class="check">✓</span> Unlimited</td>
-                            <td>Restrictions Apply</td>
-                        </tr>
-                        <tr>
-                            <td>API Service (Coming Soon)</td>
-                            <td class="highlight-column"><span class="badge">🚀 Early Access</span></td>
-                            <td>Expensive per request</td>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 text-gray-900">Commercial Use</td>
+                            <td class="px-6 py-4 bg-primary-50">
+                                <span class="text-green-600 font-semibold">✓</span> Unlimited
+                            </td>
+                            <td class="px-6 py-4 text-gray-600">Restrictions Apply</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="comparison-cta">
-                <p>Ready to experience the difference?</p>
-                <a href="#waitlist" class="btn btn-primary">Join Our Waitlist</a>
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-600 mb-6">Ready to experience the difference?</p>
+                <a href="#waitlist" class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors">Join Waitlist</a>
             </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section id="demo" class="demo">
-        <div class="container">
-            <h2 class="section-title">Experience Z Image Turbo</h2>
-            <p class="section-subtitle">Try the live demo and see the power of Z Image API in action</p>
-            <div class="demo-container">
-                <div class="demo-embed">
+    <section id="demo" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Live Demo</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Try our image generation service in real-time</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 rounded-xl overflow-hidden border border-gray-200 shadow-lg">
                     <iframe 
                         src="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" 
                         frameborder="0" 
                         width="100%" 
                         height="600"
-                        title="Z Image Turbo Demo"
-                        loading="lazy">
+                        title="Z Image Demo"
+                        loading="lazy"
+                        class="w-full">
                     </iframe>
                 </div>
-                <div class="demo-info">
-                    <h3>Interactive Demo Features</h3>
-                    <ul>
-                        <li>Real-time image generation from text prompts</li>
-                        <li>Support for both English and Chinese inputs</li>
-                        <li>Advanced parameter customization</li>
-                        <li>Instant preview and download capabilities</li>
+                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Demo Features</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Real-time image generation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>English and Chinese text support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Customizable parameters</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Instant preview and download</span>
+                        </li>
                     </ul>
-                    <a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Open Full Demo</a>
+                    <a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 transition-colors">
+                        Open Full Demo
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- API Preview Section -->
-    <section id="api-preview" class="api-preview">
-        <div class="container">
-            <h2 class="section-title">Z Image API Service (Coming Soon)</h2>
-            <p class="section-subtitle">Enterprise-ready API service with global availability and premium support</p>
+    <section id="api-preview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Managed API Service</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Enterprise-ready API service with global availability and premium support</p>
+            </div>
             
-            <div class="api-preview-content">
-                <div class="api-info">
-                    <div class="api-badge">
-                        <span class="badge-icon">🚀</span>
-                        <span class="badge-text">Coming Soon</span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium mb-6">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Coming Soon
                     </div>
-                    <h3>Hosted API Service</h3>
-                    <p>We're building a fully managed API service so you don't have to worry about infrastructure, scaling, or maintenance. Focus on your application while we handle the complexity.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hosted API Service</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">We're building a fully managed API service so you don't have to worry about infrastructure, scaling, or maintenance. Focus on your application while we handle the complexity.</p>
                     
-                    <div class="api-features">
-                        <div class="api-feature-item">
-                            <span class="feature-check">✓</span>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Global Edge Network</strong>
-                                <p>Sub-100ms latency worldwide</p>
+                                <h4 class="font-semibold text-gray-900 mb-1">Global Edge Network</h4>
+                                <p class="text-gray-600 text-sm">Sub-100ms latency worldwide</p>
                             </div>
                         </div>
-                        <div class="api-feature-item">
-                            <span class="feature-check">✓</span>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>99.9% Uptime SLA</strong>
-                                <p>Enterprise-grade reliability</p>
+                                <h4 class="font-semibold text-gray-900 mb-1">99.9% Uptime SLA</h4>
+                                <p class="text-gray-600 text-sm">Enterprise-grade reliability</p>
                             </div>
                         </div>
-                        <div class="api-feature-item">
-                            <span class="feature-check">✓</span>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Auto-scaling</strong>
-                                <p>Handle any traffic volume</p>
+                                <h4 class="font-semibold text-gray-900 mb-1">Auto-scaling</h4>
+                                <p class="text-gray-600 text-sm">Handle any traffic volume</p>
                             </div>
                         </div>
-                        <div class="api-feature-item">
-                            <span class="feature-check">✓</span>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Priority Support</strong>
-                                <p>Direct access to our team</p>
+                                <h4 class="font-semibold text-gray-900 mb-1">Priority Support</h4>
+                                <p class="text-gray-600 text-sm">Direct access to our team</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="api-code-preview">
-                    <h4>Simple API Integration</h4>
-                    <p>Easy-to-use RESTful API with Python, JavaScript, and cURL support</p>
-                    <div class="code-block">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Simple API Integration</h4>
+                    <p class="text-gray-600 mb-6">Easy-to-use RESTful API with Python, JavaScript, and cURL support</p>
+                    <div class="code-block mb-6">
                         <button class="copy-btn" aria-label="Copy code">Copy</button>
                         <pre><code># Python Example (Coming Soon)
 import requests
@@ -362,9 +507,12 @@ image_url = response.json()["image_url"]
 print(f"Generated: {image_url}")</code></pre>
                     </div>
                     
-                    <div class="api-notification">
-                        <p><strong>Be the first to know!</strong> Join our waitlist to get early access and exclusive launch pricing.</p>
-                        <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+                    <div class="bg-primary-600 text-white p-6 rounded-lg">
+                        <p class="font-semibold mb-3">Be the first to know!</p>
+                        <p class="text-sm mb-4 opacity-90">Join our waitlist to get early access and exclusive launch pricing.</p>
+                        <a href="#waitlist" class="inline-flex items-center justify-center px-4 py-2 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                            Join Waitlist
+                        </a>
                     </div>
                 </div>
             </div>
@@ -372,215 +520,395 @@ print(f"Generated: {image_url}")</code></pre>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title">Flexible Pricing for Every Need</h2>
-            <p class="section-subtitle">Choose the plan that fits your project - from hobby to enterprise</p>
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Choose the plan that fits your project</p>
             
-            <div class="pricing-toggle">
-                <span class="toggle-label">Self-Hosted (Free)</span>
-                <label class="switch">
-                    <input type="checkbox" id="pricingToggle">
-                    <span class="slider"></span>
-                </label>
-                <span class="toggle-label">Managed API <span class="badge-small">Coming Soon</span></span>
-            </div>
-
-            <div class="pricing-grid" id="selfHostedPricing">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Open Source</h3>
-                        <div class="price">
-                            <span class="price-amount">$0</span>
-                            <span class="price-period">/forever</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><span class="check">✓</span> Full source code access</li>
-                        <li><span class="check">✓</span> Self-hosted deployment</li>
-                        <li><span class="check">✓</span> Unlimited generations</li>
-                        <li><span class="check">✓</span> Commercial use allowed</li>
-                        <li><span class="check">✓</span> Community support</li>
-                        <li><span class="check">✓</span> Apache 2.0 license</li>
-                    </ul>
-                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Get Started</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Self-Hosted Pro</h3>
-                        <div class="price">
-                            <span class="price-amount">$0</span>
-                            <span class="price-period">/forever</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><span class="check">✓</span> Everything in Open Source</li>
-                        <li><span class="check">✓</span> Your own infrastructure</li>
-                        <li><span class="check">✓</span> Complete control</li>
-                        <li><span class="check">✓</span> No API costs</li>
-                        <li><span class="check">✓</span> Data privacy guaranteed</li>
-                        <li><span class="check">✓</span> Customizable models</li>
-                    </ul>
-                    <a href="#tutorial" class="btn btn-outline">View Tutorial</a>
+                <div class="flex items-center justify-center gap-4 mb-12">
+                    <span class="text-gray-700 font-medium">Self-Hosted</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="pricingToggle" class="sr-only peer">
+                        <div class="w-14 h-7 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary-600"></div>
+                    </label>
+                    <span class="text-gray-700 font-medium">Managed API <span class="ml-2 inline-block bg-primary-100 text-primary-700 px-2 py-1 rounded text-xs font-medium">Coming Soon</span></span>
                 </div>
             </div>
 
-            <div class="pricing-grid hidden" id="apiPricing">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <div class="price">
-                            <span class="price-amount">$29</span>
-                            <span class="price-period">/month</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="selfHostedPricing">
+                <div class="bg-white rounded-xl border-2 border-gray-200 p-8 hover:border-primary-300 transition-colors">
+                    <div class="text-center mb-8 pb-8 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Open Source</h3>
+                        <div class="flex items-baseline justify-center gap-2">
+                            <span class="text-5xl font-bold text-gray-900">$0</span>
+                            <span class="text-gray-600">/forever</span>
                         </div>
-                        <p class="price-note">Perfect for side projects</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><span class="check">✓</span> 10,000 images/month</li>
-                        <li><span class="check">✓</span> Standard speed</li>
-                        <li><span class="check">✓</span> Email support</li>
-                        <li><span class="check">✓</span> API documentation</li>
-                        <li><span class="check">✓</span> $0.003 per extra image</li>
-                        <li><span class="cross">✗</span> Priority queue</li>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Full source code access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Self-hosted deployment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Unlimited generations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Commercial use allowed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Community support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Apache 2.0 license</span>
+                        </li>
                     </ul>
-                    <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                        Get Started
+                    </a>
                 </div>
 
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Professional</h3>
-                        <div class="price">
-                            <span class="price-amount">$99</span>
-                            <span class="price-period">/month</span>
+                <div class="bg-white rounded-xl border-2 border-gray-200 p-8 hover:border-primary-300 transition-colors">
+                    <div class="text-center mb-8 pb-8 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Self-Hosted</h3>
+                        <div class="flex items-baseline justify-center gap-2">
+                            <span class="text-5xl font-bold text-gray-900">$0</span>
+                            <span class="text-gray-600">/forever</span>
                         </div>
-                        <p class="price-note">Best for growing businesses</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><span class="check">✓</span> 50,000 images/month</li>
-                        <li><span class="check">✓</span> Priority processing</li>
-                        <li><span class="check">✓</span> Priority support (24h)</li>
-                        <li><span class="check">✓</span> Advanced features</li>
-                        <li><span class="check">✓</span> $0.002 per extra image</li>
-                        <li><span class="check">✓</span> Custom rate limits</li>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Everything in Open Source</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Your own infrastructure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Complete control</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">No API costs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Data privacy guaranteed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Customizable models</span>
+                        </li>
                     </ul>
-                    <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                        <div class="price">
-                            <span class="price-amount">Custom</span>
-                        </div>
-                        <p class="price-note">Tailored for your needs</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><span class="check">✓</span> Unlimited images</li>
-                        <li><span class="check">✓</span> Dedicated infrastructure</li>
-                        <li><span class="check">✓</span> 24/7 phone support</li>
-                        <li><span class="check">✓</span> Custom SLA</li>
-                        <li><span class="check">✓</span> On-premise deployment</li>
-                        <li><span class="check">✓</span> Training & onboarding</li>
-                    </ul>
-                    <a href="#waitlist" class="btn btn-outline">Contact Sales</a>
+                    <a href="#tutorial" class="block w-full text-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                        View Tutorial
+                    </a>
                 </div>
             </div>
 
-            <div class="pricing-footer">
-                <p class="pricing-note">💡 <strong>Launch Special:</strong> Early adopters who join our waitlist will receive <strong>50% off</strong> for the first 6 months!</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden" id="apiPricing">
+                <div class="bg-white rounded-xl border-2 border-gray-200 p-8 hover:border-primary-300 transition-colors">
+                    <div class="text-center mb-8 pb-8 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+                        <div class="flex items-baseline justify-center gap-2">
+                            <span class="text-5xl font-bold text-gray-900">$29</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-2">Perfect for side projects</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">10,000 images/month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Standard speed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Email support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">API documentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">$0.003 per extra image</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Priority queue</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full text-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                        Join Waitlist
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl border-2 border-primary-500 p-8 relative hover:border-primary-600 transition-colors">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                    </div>
+                    <div class="text-center mb-8 pb-8 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
+                        <div class="flex items-baseline justify-center gap-2">
+                            <span class="text-5xl font-bold text-gray-900">$99</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-2">Best for growing businesses</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">50,000 images/month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Priority processing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Priority support (24h)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Advanced features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">$0.002 per extra image</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Custom rate limits</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full text-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors">
+                        Join Waitlist
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl border-2 border-gray-200 p-8 hover:border-primary-300 transition-colors">
+                    <div class="text-center mb-8 pb-8 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                        <div class="flex items-baseline justify-center gap-2">
+                            <span class="text-5xl font-bold text-gray-900">Custom</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-2">Tailored for your needs</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Unlimited images</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Dedicated infrastructure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">24/7 phone support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Custom SLA</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">On-premise deployment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-600">Training & onboarding</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full text-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center bg-white rounded-xl border border-gray-200 p-6 max-w-3xl mx-auto">
+                <p class="text-gray-700">
+                    <span class="font-semibold">Launch Special:</span> Early adopters who join our waitlist will receive <span class="font-semibold text-primary-600">50% off</span> for the first 6 months!
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Tutorial Section -->
-    <section id="tutorial" class="tutorial">
-        <div class="container">
-            <h2 class="section-title">Z Image API Tutorial: Complete Guide</h2>
-            <p class="section-subtitle">Step-by-step tutorial to get started with Z Image API</p>
+    <section id="tutorial" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Getting Started</h2>
+                <p class="text-lg text-gray-600">Step-by-step guide to get started with Z Image API</p>
+            </div>
             
-            <div class="tutorial-content">
-                <div class="tutorial-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Installation & Setup</h3>
-                        <p>Begin by cloning the Z Image API repository from GitHub and installing the required dependencies.</p>
-                        <div class="code-block">
-                            <button class="copy-btn" aria-label="Copy code">Copy</button>
-                            <pre><code># Clone the repository from GitHub
+            <div class="space-y-8">
+                <div class="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Installation & Setup</h3>
+                            <p class="text-gray-600 mb-4">Begin by cloning the repository from GitHub and installing the required dependencies.</p>
+                            <div class="code-block relative mt-4">
+                                <button class="copy-btn" aria-label="Copy code">Copy</button>
+                                <pre><code># Clone the repository from GitHub
 git clone https://github.com/Tongyi-MAI/Z-Image.git
 cd Z-Image
 
 # Install dependencies
 pip install -r requirements.txt</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tutorial-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>System Requirements</h3>
-                        <p>Ensure your system meets the minimum requirements for running Z Image API:</p>
-                        <ul>
-                            <li>Python 3.8 or higher</li>
-                            <li>CUDA-compatible GPU with 16GB+ VRAM</li>
-                            <li>PyTorch 2.0 or later</li>
-                            <li>Sufficient storage for model weights</li>
-                        </ul>
+                <div class="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">System Requirements</h3>
+                            <p class="text-gray-600 mb-4">Ensure your system meets the minimum requirements:</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><span class="text-primary-600 mr-2">•</span> Python 3.8 or higher</li>
+                                <li class="flex items-start"><span class="text-primary-600 mr-2">•</span> CUDA-compatible GPU with 16GB+ VRAM</li>
+                                <li class="flex items-start"><span class="text-primary-600 mr-2">•</span> PyTorch 2.0 or later</li>
+                                <li class="flex items-start"><span class="text-primary-600 mr-2">•</span> Sufficient storage for model weights</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="tutorial-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Download Model Weights</h3>
-                        <p>Download the pre-trained Z Image model weights from the official repository.</p>
-                        <div class="code-block">
-                            <button class="copy-btn" aria-label="Copy code">Copy</button>
-                            <pre><code># Download model weights
+                <div class="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Download Model Weights</h3>
+                            <p class="text-gray-600 mb-4">Download the pre-trained model weights from the official repository.</p>
+                            <div class="code-block relative mt-4">
+                                <button class="copy-btn" aria-label="Copy code">Copy</button>
+                                <pre><code># Download model weights
 python download_models.py --model turbo</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tutorial-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Basic Usage</h3>
-                        <p>Start generating images with simple Python code. See the Python guide below for detailed examples.</p>
-                        <div class="code-block">
-                            <button class="copy-btn" aria-label="Copy code">Copy</button>
-                            <pre><code># Basic image generation example
+                <div class="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Basic Usage</h3>
+                            <p class="text-gray-600 mb-4">Start generating images with simple Python code. See the Python guide below for detailed examples.</p>
+                            <div class="code-block relative mt-4">
+                                <button class="copy-btn" aria-label="Copy code">Copy</button>
+                                <pre><code># Basic image generation example
 from zimage import ZImageAPI
 
 api = ZImageAPI()
 image = api.generate("A beautiful sunset over mountains")
 image.save("output.png")</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tutorial-cta">
-                <p>Ready to dive deeper into the Z Image API?</p>
-                <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Full Documentation on GitHub</a>
+            <div class="mt-12 text-center bg-white rounded-xl border border-gray-200 p-8">
+                <p class="text-lg text-gray-600 mb-6">Ready to dive deeper?</p>
+                <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors">
+                    Explore Full Documentation on GitHub
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Python Guide Section -->
-    <section id="python-guide" class="python-guide">
-        <div class="container">
-            <h2 class="section-title">Z Image API Python Guide</h2>
-            <p class="section-subtitle">Comprehensive Python integration examples and best practices</p>
+    <section id="python-guide" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Python Integration Guide</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Python integration examples and best practices</p>
+            </div>
             
-            <div class="guide-grid">
-                <div class="guide-card">
-                    <h3>Basic Implementation</h3>
-                    <p>Simple Python script to generate your first image using Z Image API:</p>
-                    <div class="code-block">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-xl border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Basic Implementation</h3>
+                    <p class="text-gray-600 mb-4">Simple Python script to generate your first image:</p>
+                    <div class="code-block relative">
                         <button class="copy-btn" aria-label="Copy code">Copy</button>
                         <pre><code>import torch
 from zimage import ZImagePipeline
@@ -605,10 +933,10 @@ image.save("generated_image.png")</code></pre>
                     </div>
                 </div>
 
-                <div class="guide-card">
-                    <h3>Advanced Configuration</h3>
-                    <p>Customize generation parameters for optimal results:</p>
-                    <div class="code-block">
+                <div class="bg-gray-50 rounded-xl border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Advanced Configuration</h3>
+                    <p class="text-gray-600 mb-4">Customize generation parameters for optimal results:</p>
+                    <div class="code-block relative">
                         <button class="copy-btn" aria-label="Copy code">Copy</button>
                         <pre><code>from zimage import ZImagePipeline
 
@@ -631,10 +959,10 @@ image.save("advanced_output.png")</code></pre>
                     </div>
                 </div>
 
-                <div class="guide-card">
-                    <h3>Batch Processing</h3>
-                    <p>Efficiently generate multiple images with Python loops:</p>
-                    <div class="code-block">
+                <div class="bg-gray-50 rounded-xl border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Batch Processing</h3>
+                    <p class="text-gray-600 mb-4">Efficiently generate multiple images with Python loops:</p>
+                    <div class="code-block relative">
                         <button class="copy-btn" aria-label="Copy code">Copy</button>
                         <pre><code>from zimage import ZImagePipeline
 
@@ -655,10 +983,10 @@ for idx, prompt in enumerate(prompts):
                     </div>
                 </div>
 
-                <div class="guide-card">
-                    <h3>Error Handling</h3>
-                    <p>Robust Python code with proper exception handling:</p>
-                    <div class="code-block">
+                <div class="bg-gray-50 rounded-xl border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Error Handling</h3>
+                    <p class="text-gray-600 mb-4">Robust Python code with proper exception handling:</p>
+                    <div class="code-block relative">
                         <button class="copy-btn" aria-label="Copy code">Copy</button>
                         <pre><code>from zimage import ZImagePipeline
 import torch
@@ -684,23 +1012,35 @@ except Exception as e:
                 </div>
             </div>
 
-            <div class="python-resources">
-                <h3>Additional Python Resources</h3>
-                <div class="resources-grid">
-                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="resource-card">
-                        <div class="resource-icon">📚</div>
-                        <h4>GitHub Repository</h4>
-                        <p>Complete source code and documentation</p>
+            <div class="mt-12 bg-gray-50 rounded-xl border border-gray-200 p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Additional Resources</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-primary-300 hover:shadow-lg transition-all text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">GitHub Repository</h4>
+                        <p class="text-gray-600 text-sm">Complete source code and documentation</p>
                     </a>
-                    <a href="https://github.com/Tongyi-MAI/Z-Image/tree/main/examples" target="_blank" rel="noopener noreferrer" class="resource-card">
-                        <div class="resource-icon">💡</div>
-                        <h4>Code Examples</h4>
-                        <p>Ready-to-use Python scripts</p>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image/tree/main/examples" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-primary-300 hover:shadow-lg transition-all text-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Code Examples</h4>
+                        <p class="text-gray-600 text-sm">Ready-to-use Python scripts</p>
                     </a>
-                    <a href="https://github.com/Tongyi-MAI/Z-Image/issues" target="_blank" rel="noopener noreferrer" class="resource-card">
-                        <div class="resource-icon">🤝</div>
-                        <h4>Community Support</h4>
-                        <p>Get help from developers</p>
+                    <a href="https://github.com/Tongyi-MAI/Z-Image/issues" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg border border-gray-200 p-6 hover:border-primary-300 hover:shadow-lg transition-all text-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Community Support</h4>
+                        <p class="text-gray-600 text-sm">Get help from developers</p>
                     </a>
                 </div>
             </div>
@@ -708,43 +1048,72 @@ except Exception as e:
     </section>
 
     <!-- GitHub Section -->
-    <section id="github" class="github-section">
-        <div class="container">
-            <h2 class="section-title">Open Source on GitHub</h2>
-            <p class="section-subtitle">Join the Z Image API community and contribute to the future of AI image generation</p>
+    <section id="github" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Open Source on GitHub</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Join the Z Image API community</p>
+            </div>
             
-            <div class="github-content">
-                <div class="github-info">
-                    <h3>Why GitHub?</h3>
-                    <ul>
-                        <li>Access to complete source code and model architecture</li>
-                        <li>Regular updates and bug fixes from Tongyi MAI team</li>
-                        <li>Active community discussions and feature requests</li>
-                        <li>Comprehensive documentation and examples</li>
-                        <li>Apache 2.0 license for commercial use</li>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Why GitHub?</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Access to complete source code and model architecture</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Regular updates and bug fixes from Tongyi MAI team</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Active community discussions and feature requests</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Comprehensive documentation and examples</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Apache 2.0 license for commercial use</span>
+                        </li>
                     </ul>
-                    <div class="github-buttons">
-                        <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
                             </svg>
                             Star on GitHub
                         </a>
-                        <a href="https://github.com/Tongyi-MAI/Z-Image/fork" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Fork Repository</a>
+                        <a href="https://github.com/Tongyi-MAI/Z-Image/fork" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
+                            Fork Repository
+                        </a>
                     </div>
                 </div>
-                <div class="github-stats">
-                    <div class="stat-card">
-                        <div class="stat-title">Repository</div>
-                        <div class="stat-value">Tongyi-MAI/Z-Image</div>
+                <div class="space-y-4">
+                    <div class="bg-gray-800 rounded-lg border border-gray-700 p-6">
+                        <div class="text-gray-400 text-sm mb-2">Repository</div>
+                        <div class="text-white font-semibold text-lg">Tongyi-MAI/Z-Image</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-title">License</div>
-                        <div class="stat-value">Apache 2.0</div>
+                    <div class="bg-gray-800 rounded-lg border border-gray-700 p-6">
+                        <div class="text-gray-400 text-sm mb-2">License</div>
+                        <div class="text-white font-semibold text-lg">Apache 2.0</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-title">Language</div>
-                        <div class="stat-value">Python</div>
+                    <div class="bg-gray-800 rounded-lg border border-gray-700 p-6">
+                        <div class="text-gray-400 text-sm mb-2">Language</div>
+                        <div class="text-white font-semibold text-lg">Python</div>
                     </div>
                 </div>
             </div>
@@ -752,94 +1121,112 @@ except Exception as e:
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>What is Z Image API?</h3>
-                    <p>Z Image API is an open-source, lightning-fast text-to-image generation API developed by Tongyi MAI. It can generate high-quality images in under a second using the Turbo model architecture, with full Python integration and comprehensive documentation.</p>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What is Z Image API?</h3>
+                    <p class="text-gray-600">Z Image API is an open-source, high-performance image generation service developed by Tongyi MAI. It generates high-quality images with sub-second response times, featuring full Python integration and comprehensive documentation.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>How do I integrate Z Image API with Python?</h3>
-                    <p>Integration is straightforward using our Python SDK. Simply install the package from GitHub, import the ZImagePipeline class, and start generating images with just a few lines of code. Check our Python guide section for detailed examples.</p>
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How do I integrate Z Image API with Python?</h3>
+                    <p class="text-gray-600">Integration is straightforward using our Python SDK. Simply install the package from GitHub, import the ZImagePipeline class, and start generating images with just a few lines of code. Check our Python guide section for detailed examples.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>What are the system requirements?</h3>
-                    <p>Z Image API requires Python 3.8+, a CUDA-compatible GPU with at least 16GB VRAM, and PyTorch 2.0 or later. The API is optimized to run efficiently on consumer-grade hardware.</p>
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What are the system requirements?</h3>
+                    <p class="text-gray-600">Z Image API requires Python 3.8+, a CUDA-compatible GPU with at least 16GB VRAM, and PyTorch 2.0 or later. The API is optimized to run efficiently on consumer-grade hardware.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Is Z Image API free to use?</h3>
-                    <p>Yes! Z Image API is completely open-source and released under the Apache 2.0 license, which means you can use it freely for both personal and commercial projects.</p>
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Is Z Image API free to use?</h3>
+                    <p class="text-gray-600">Yes! Z Image API is completely open-source and released under the Apache 2.0 license, which means you can use it freely for both personal and commercial projects.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Where can I find the GitHub repository?</h3>
-                    <p>The official Z Image API repository is available at <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer">github.com/Tongyi-MAI/Z-Image</a>. You'll find complete source code, documentation, examples, and community support.</p>
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Where can I find the GitHub repository?</h3>
+                    <p class="text-gray-600">The official Z Image API repository is available at <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:underline">github.com/Tongyi-MAI/Z-Image</a>. You'll find complete source code, documentation, examples, and community support.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Can I contribute to the project?</h3>
-                    <p>Absolutely! We welcome contributions from the community. Visit our GitHub repository to report issues, submit pull requests, or participate in discussions about new features and improvements.</p>
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I contribute to the project?</h3>
+                    <p class="text-gray-600">Absolutely! We welcome contributions from the community. Visit our GitHub repository to report issues, submit pull requests, or participate in discussions about new features and improvements.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Section -->
-    <section id="waitlist" class="waitlist">
-        <div class="container">
-            <div class="waitlist-content">
-                <div class="waitlist-info">
-                    <span class="waitlist-badge">🎉 Early Access Program</span>
-                    <h2 class="section-title">Be Among the First to Experience Our API Service</h2>
-                    <p class="waitlist-description">Join our exclusive waitlist and get:</p>
-                    <ul class="waitlist-benefits">
-                        <li>
-                            <span class="benefit-icon">🎁</span>
+    <section id="waitlist" class="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">Early Access Program</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Join Our Waitlist</h2>
+                    <p class="text-lg text-white/90 mb-8">Be among the first to experience our API service</p>
+                    <ul class="space-y-6 mb-10">
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>50% Launch Discount</strong>
-                                <p>Save 50% for the first 6 months</p>
+                                <strong class="block text-lg mb-1">50% Launch Discount</strong>
+                                <p class="text-white/80">Save 50% for the first 6 months</p>
                             </div>
                         </li>
-                        <li>
-                            <span class="benefit-icon">⚡</span>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Priority Access</strong>
-                                <p>Be first to test our managed API</p>
+                                <strong class="block text-lg mb-1">Priority Access</strong>
+                                <p class="text-white/80">Be first to test our managed API</p>
                             </div>
                         </li>
-                        <li>
-                            <span class="benefit-icon">💎</span>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Exclusive Credits</strong>
-                                <p>10,000 free API calls at launch</p>
+                                <strong class="block text-lg mb-1">Exclusive Credits</strong>
+                                <p class="text-white/80">10,000 free API calls at launch</p>
                             </div>
                         </li>
-                        <li>
-                            <span class="benefit-icon">📈</span>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Beta Features</strong>
-                                <p>Early access to new capabilities</p>
+                                <strong class="block text-lg mb-1">Beta Features</strong>
+                                <p class="text-white/80">Early access to new capabilities</p>
                             </div>
                         </li>
                     </ul>
-                    <div class="social-proof">
-                        <div class="avatars">
-                            <div class="avatar">👨‍💻</div>
-                            <div class="avatar">👩‍💼</div>
-                            <div class="avatar">👨‍🎨</div>
-                            <div class="avatar">👩‍🔬</div>
+                    <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 bg-white/20 rounded-full border-2 border-white"></div>
+                            <div class="w-10 h-10 bg-white/20 rounded-full border-2 border-white"></div>
+                            <div class="w-10 h-10 bg-white/20 rounded-full border-2 border-white"></div>
+                            <div class="w-10 h-10 bg-white/20 rounded-full border-2 border-white"></div>
                         </div>
-                        <p><strong>1,247+ developers</strong> already on the waitlist</p>
+                        <p class="text-sm"><strong>1,247+ developers</strong> already on the waitlist</p>
                     </div>
                 </div>
 
-                <div class="waitlist-form-container">
-                    <form class="waitlist-form" id="waitlistForm">
-                        <h3>Join the Waitlist</h3>
-                        <p class="form-subtitle">Get notified when we launch our API service</p>
+                <div class="bg-white rounded-xl p-8 shadow-xl">
+                    <form id="waitlistForm">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Join the Waitlist</h3>
+                        <p class="text-gray-600 mb-6">Get notified when we launch our API service</p>
                         
-                        <div class="form-group">
-                            <label for="fullName">Full Name *</label>
+                        <div class="mb-4">
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                             <input 
                                 type="text" 
                                 id="fullName" 
@@ -847,11 +1234,12 @@ except Exception as e:
                                 required 
                                 placeholder="John Doe"
                                 autocomplete="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                             >
                         </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
                             <input 
                                 type="email" 
                                 id="email" 
@@ -859,23 +1247,25 @@ except Exception as e:
                                 required 
                                 placeholder="john@example.com"
                                 autocomplete="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                             >
                         </div>
 
-                        <div class="form-group">
-                            <label for="company">Company/Project (Optional)</label>
+                        <div class="mb-4">
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company/Project (Optional)</label>
                             <input 
                                 type="text" 
                                 id="company" 
                                 name="company" 
                                 placeholder="Your company or project name"
                                 autocomplete="organization"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                             >
                         </div>
 
-                        <div class="form-group">
-                            <label for="useCase">What will you build with Z Image API?</label>
-                            <select id="useCase" name="useCase" required>
+                        <div class="mb-4">
+                            <label for="useCase" class="block text-sm font-medium text-gray-700 mb-2">What will you build with Z Image API?</label>
+                            <select id="useCase" name="useCase" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
                                 <option value="">Select your use case...</option>
                                 <option value="creative">Creative Applications</option>
                                 <option value="ecommerce">E-commerce & Marketing</option>
@@ -886,9 +1276,9 @@ except Exception as e:
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="estimatedVolume">Estimated Monthly Volume</label>
-                            <select id="estimatedVolume" name="estimatedVolume">
+                        <div class="mb-4">
+                            <label for="estimatedVolume" class="block text-sm font-medium text-gray-700 mb-2">Estimated Monthly Volume</label>
+                            <select id="estimatedVolume" name="estimatedVolume" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
                                 <option value="">Select volume...</option>
                                 <option value="low">< 10,000 images/month</option>
                                 <option value="medium">10,000 - 50,000 images/month</option>
@@ -897,32 +1287,36 @@ except Exception as e:
                             </select>
                         </div>
 
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="newsletter" name="newsletter" checked>
-                                <span>Send me updates about Z Image API and AI image generation</span>
+                        <div class="mb-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500">
+                                <span class="ml-2 text-sm text-gray-600">Send me updates about Z Image API and new features</span>
                             </label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-large btn-full-width" id="submitBtn">
+                        <button type="submit" class="w-full px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors" id="submitBtn">
                             <span class="btn-text">Join Waitlist Now</span>
                             <span class="btn-loading hidden">Submitting...</span>
                         </button>
 
-                        <p class="form-note">We respect your privacy. Unsubscribe anytime.</p>
+                        <p class="text-xs text-gray-500 text-center mt-4">We respect your privacy. Unsubscribe anytime.</p>
                     </form>
 
-                    <div class="success-message hidden" id="successMessage">
-                        <div class="success-icon">🎉</div>
-                        <h3>You're on the list!</h3>
-                        <p>Thank you for joining our waitlist. We'll notify you as soon as our API service launches.</p>
-                        <p class="success-note">Check your email for a confirmation message.</p>
-                        <div class="share-buttons">
-                            <p><strong>Share with your network:</strong></p>
-                            <div class="share-links">
-                                <a href="https://twitter.com/intent/tweet?text=Just%20joined%20the%20waitlist%20for%20Z%20Image%20API%20-%20the%20fastest%20AI%20image%20generation%20service!&url=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="share-btn twitter">Twitter</a>
-                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">LinkedIn</a>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="share-btn facebook">Facebook</a>
+                    <div class="hidden text-center" id="successMessage">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">You're on the list!</h3>
+                        <p class="text-gray-600 mb-2">Thank you for joining our waitlist. We'll notify you as soon as our API service launches.</p>
+                        <p class="text-sm text-gray-500 mb-6">Check your email for a confirmation message.</p>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-sm font-medium text-gray-700 mb-3">Share with your network:</p>
+                            <div class="flex gap-3 justify-center">
+                                <a href="https://twitter.com/intent/tweet?text=Just%20joined%20the%20waitlist%20for%20Z%20Image%20API%20-%20high-performance%20image%20generation%20service!&url=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-[#1DA1F2] text-white rounded-lg text-sm font-medium hover:bg-[#1a8cd8] transition-colors">Twitter</a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#095195] transition-colors">LinkedIn</a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-[#1877F2] text-white rounded-lg text-sm font-medium hover:bg-[#166fe5] transition-colors">Facebook</a>
                             </div>
                         </div>
                     </div>
@@ -932,55 +1326,58 @@ except Exception as e:
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Start Building with Z Image API Today</h2>
-            <p>Join thousands of developers using Z Image API to create stunning AI-generated images</p>
-            <div class="cta-buttons">
-                <a href="#tutorial" class="btn btn-primary btn-large">View Tutorial</a>
-                <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">Explore GitHub</a>
+    <section class="py-20 bg-primary-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Start Building with Z Image API Today</h2>
+            <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">Join thousands of developers using Z Image API for their image generation needs</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#tutorial" class="inline-flex items-center justify-center px-8 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                    View Tutorial
+                </a>
+                <a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
+                    Explore GitHub
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Z Image API</h4>
-                    <p>Advanced AI image generation for developers. Fast, powerful, and open-source.</p>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Z Image API</h4>
+                    <p class="text-gray-400 text-sm">High-performance image generation service for developers. Fast, reliable, and open-source.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#demo">Demo</a></li>
-                        <li><a href="#tutorial">Tutorial</a></li>
-                        <li><a href="#python-guide">Python Guide</a></li>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#demo" class="hover:text-white transition-colors">Demo</a></li>
+                        <li><a href="#tutorial" class="hover:text-white transition-colors">Tutorial</a></li>
+                        <li><a href="#python-guide" class="hover:text-white transition-colors">Python Guide</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                        <li><a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
-                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/issues" target="_blank" rel="noopener noreferrer">Community</a></li>
-                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a></li>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Repository</a></li>
+                        <li><a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Live Demo</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/issues" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Community</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">License</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Developer</h4>
-                    <ul>
-                        <li><a href="https://github.com/Tongyi-MAI" target="_blank" rel="noopener noreferrer">Tongyi MAI</a></li>
-                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
-                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/tree/main/examples" target="_blank" rel="noopener noreferrer">Examples</a></li>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Developer</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/Tongyi-MAI" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Tongyi MAI</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image/tree/main/examples" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Examples</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
                 <p>&copy; 2025 Z Image API. Licensed under Apache 2.0. Built for developers by developers.</p>
-                <p class="footer-keywords">Keywords: Z image api python | Z image api github | Z image api tutorial</p>
             </div>
         </div>
     </footer>
@@ -988,4 +1385,3 @@ except Exception as e:
     <script src="script.js"></script>
 </body>
 </html>
-
