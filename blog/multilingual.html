@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Image Generation with Z Image API - Z Image API Blog</title>
+    <meta name="description" content="Master multilingual image generation. Support for English, Chinese, and 30+ languages with proper text rendering.">
+    <link rel="icon" type="image/svg+xml" href="../Z.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style-tailwind.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="text-xl font-bold text-gray-900">Z Image API</span>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Home</a>
+                    <a href="../blog.html" class="text-primary-600 font-medium">Blog</a>
+                    <a href="../index.html#waitlist" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-32 pb-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="../blog.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Blog
+            </a>
+
+            <div class="bg-white rounded-xl shadow-sm p-8 mb-8 border border-gray-100">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Advanced</span>
+                    <span class="text-gray-500 text-sm">10 min read</span>
+                </div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Multilingual Text in Images with Z Image API</h1>
+                <p class="text-xl text-gray-600">Master multilingual image generation. Support for English, Chinese, and 30+ languages with proper text rendering.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                <div class="prose prose-lg max-w-none">
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Multilingual Support Overview</h2>
+                    <p class="text-gray-700 leading-relaxed mb-6">Z Image API natively supports multilingual prompts and can understand and generate images with elements from multiple languages. This is crucial for international applications.</p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Supported Languages</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <span class="mr-2">🇺🇸</span>English
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🇨🇳</span>Chinese (Simplified & Traditional)
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🇯🇵</span>Japanese
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🇰🇷</span>Korean
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <span class="mr-2">🇪🇸</span>Spanish
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🇫🇷</span>French
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🇩🇪</span>German
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🌍</span>And more...
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Basic Usage</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">Simply write your prompt in your chosen language:</p>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm"># English prompt
+result = api.generate("A cute panda in bamboo forest")
+
+# Chinese prompt
+result = api.generate("一只可爱的熊猫在竹林中")
+
+# Japanese prompt
+result = api.generate("竹林の中のかわいいパンダ")
+
+# Mixed languages
+result = api.generate("Modern office 现代办公室 with tech elements")</code></pre>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Building a Multilingual Generator</h2>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm">class MultilingualImageGenerator:
+    def __init__(self, api_key):
+        self.api = ZImageAPI(api_key)
+        self.templates = {
+            'en': "High quality commercial photography, {subject}, {style} style",
+            'zh': "高质量商业摄影，{subject}，{style}风格",
+            'ja': "高品質の商業写真、{subject}、{style}スタイル",
+            'es': "Fotografía comercial de alta calidad, {subject}, estilo {style}"
+        }
+    
+    def generate(self, subject, style, language='en'):
+        template = self.templates.get(language, self.templates['en'])
+        prompt = template.format(subject=subject, style=style)
+        return self.api.generate(prompt)
+
+# Usage example
+generator = MultilingualImageGenerator(api_key)
+
+# Generate for different markets
+generator.generate("coffee", "minimalist", language='en')  # English market
+generator.generate("咖啡", "极简", language='zh')  # Chinese market
+generator.generate("コーヒー", "ミニマリスト", language='ja')  # Japanese market</code></pre>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Language Detection</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">Automatically detect user input language:</p>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm">from langdetect import detect
+
+def smart_generate(user_input):
+    """Smart multilingual generation"""
+    try:
+        language = detect(user_input)
+        print(f"Detected language: {language}")
+        
+        # Adjust parameters based on language
+        if language in ['zh-cn', 'zh-tw']:
+            # Chinese optimization
+            result = api.generate(
+                user_input,
+                language_hint='chinese'
+            )
+        elif language == 'ja':
+            # Japanese optimization
+            result = api.generate(
+                user_input,
+                language_hint='japanese'
+            )
+        else:
+            result = api.generate(user_input)
+        
+        return result
+    except Exception as e:
+        print(f"Language detection failed: {e}")
+        return api.generate(user_input)</code></pre>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Translation-Assisted Generation</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">Combine with translation APIs for seamless multilingual support:</p>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm">from googletrans import Translator
+
+class TranslatedImageGenerator:
+    def __init__(self, api_key):
+        self.api = ZImageAPI(api_key)
+        self.translator = Translator()
+    
+    def generate_multilingual(self, prompt, target_languages):
+        """Generate images for multiple language markets"""
+        results = {}
+        
+        for lang in target_languages:
+            # Translate prompt
+            if lang != 'en':
+                translated = self.translator.translate(
+                    prompt,
+                    dest=lang
+                ).text
+            else:
+                translated = prompt
+            
+            # Generate image
+            result = self.api.generate(translated)
+            results[lang] = {
+                'prompt': translated,
+                'image': result
+            }
+            print(f"{lang}: {translated}")
+        
+        return results
+
+# Example
+gen = TranslatedImageGenerator(api_key)
+results = gen.generate_multilingual(
+    "Modern technology office",
+    target_languages=['en', 'ja', 'ko', 'es']
+)</code></pre>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cultural Adaptation</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">Different cultures have different visual preferences:</p>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm">cultural_adaptations = {
+    'en': {
+        'colors': 'Blue and white, professional',
+        'style': 'Modern minimalist',
+        'symbols': 'Contemporary business elements'
+    },
+    'zh': {
+        'colors': 'Red and gold, festive',
+        'style': 'Traditional Chinese elements',
+        'symbols': 'Dragon, phoenix, auspicious clouds'
+    },
+    'ja': {
+        'colors': 'Cherry blossom pink and white',
+        'style': 'Japanese aesthetic design',
+        'symbols': 'Cherry blossoms, Mount Fuji, traditional patterns'
+    }
+}
+
+def culturally_adapted_generate(base_prompt, culture):
+    """Generate culturally adapted images"""
+    adaptations = cultural_adaptations.get(culture, {})
+    
+    enhanced_prompt = f"{base_prompt}, {adaptations.get('colors', '')}, "
+    enhanced_prompt += f"{adaptations.get('style', '')}, "
+    enhanced_prompt += f"featuring {adaptations.get('symbols', '')}"
+    
+    return api.generate(enhanced_prompt)</code></pre>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-lg">
+                        <p class="font-semibold text-yellow-900 mb-2">💡 Best Practices</p>
+                        <ul class="space-y-2 text-yellow-800">
+                            <li>• Use clear, concise language descriptions</li>
+                            <li>• Avoid overly complex cultural-specific slang</li>
+                            <li>• Provide context for keywords</li>
+                            <li>• Test different language versions for effectiveness</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Real-World Case Study</h2>
+                    <div class="bg-green-50 border-l-4 border-green-500 p-6 my-8 rounded-r-lg">
+                        <p class="font-semibold text-green-900 mb-2">Success Story: International E-commerce Platform</p>
+                        <p class="text-green-800">A cross-border e-commerce platform used Z Image API's multilingual capabilities to generate localized product images for users in different regions. Conversion rates increased by 45%, and user satisfaction improved significantly.</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Conclusion</h2>
+                    <p class="text-gray-700 leading-relaxed mb-6">Multilingual support is more than just translating text—it's about cultural adaptation and user experience. Z Image API's powerful multilingual capabilities help you easily build global applications.</p>
+
+                    <p class="text-gray-700 leading-relaxed mb-6">Start exploring the possibilities of <a href="../index.html#waitlist" class="text-primary-600 hover:text-primary-700 font-semibold underline">multilingual image generation</a> today!</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Z Image API</h4>
+                    <p class="text-gray-400 text-sm">Professional image generation service for developers</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" class="hover:text-white transition-colors">GitHub</a></li>
+                        <li><a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" class="hover:text-white transition-colors">Demo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Z Image API. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

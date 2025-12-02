@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Image API Blog - Tutorials, Guides & Updates</title>
+    <meta name="description" content="Learn how to use Z Image API with our comprehensive tutorials, Python guides, and latest updates. Expert tips for image generation API integration.">
+    <meta name="keywords" content="Z image api blog, Z image api tutorial, image generation guide, python api tutorial, z image documentation">
+    <link rel="canonical" href="https://yourdomain.com/blog.html">
+    <link rel="icon" type="image/svg+xml" href="Z.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style-tailwind.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="text-xl font-bold text-gray-900">Z Image API</span>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Home</a>
+                    <a href="blog.html" class="text-primary-600 font-medium">Blog</a>
+                    <a href="index.html#waitlist" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary-50 via-white to-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Z Image API Blog</h1>
+                <p class="text-xl text-gray-600">Tutorials, guides, and updates for developers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium">Tutorial</span>
+                            <span class="text-sm text-gray-500">5 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">Getting Started with Z Image API Python SDK</h2>
+                        <p class="text-gray-600 mb-4">Complete guide to integrate Z Image API into your Python projects. Learn installation, setup, and basic usage in under 10 minutes.</p>
+                        <a href="blog/python-sdk.html" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Performance</span>
+                            <span class="text-sm text-gray-500">8 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">Optimizing Z Image API for Production</h2>
+                        <p class="text-gray-600 mb-4">Best practices for deploying Z Image API in production environments. Tips for performance, caching, and scaling.</p>
+                        <a href="blog/production-optimization.html" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Use Cases</span>
+                            <span class="text-sm text-gray-500">6 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">10 Creative Ways to Use Z Image API</h2>
+                        <p class="text-gray-600 mb-4">Explore real-world applications of Z Image API from e-commerce to content creation. Inspire your next project.</p>
+                        <a href="blog/use-cases.html" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">Security</span>
+                            <span class="text-sm text-gray-500">7 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">Z Image API Security Best Practices</h2>
+                        <p class="text-gray-600 mb-4">Learn how to secure your Z Image API implementation. API key management, rate limiting, and data privacy.</p>
+                        <a href="blog/security.html" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Advanced</span>
+                            <span class="text-sm text-gray-500">10 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">Multilingual Text in Images with Z Image API</h2>
+                        <p class="text-gray-600 mb-4">Master multilingual image generation. Support for English, Chinese, and 30+ languages with proper text rendering.</p>
+                        <a href="blog/multilingual.html" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium">Comparison</span>
+                            <span class="text-sm text-gray-500">12 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">Z Image API vs Other Image Generation APIs</h2>
+                        <p class="text-gray-600 mb-4">Comprehensive comparison of Z Image API with competitors. Performance benchmarks, pricing, and feature analysis.</p>
+                        <a href="blog/comparison.html" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start with Z Image API?</h2>
+            <p class="text-lg text-white/90 mb-8">Join our waitlist for early access to the managed API service</p>
+            <a href="index.html#waitlist" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
+                Join Waitlist Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Z Image API</h4>
+                    <p class="text-gray-400 text-sm">Professional image generation service for developers</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#tutorial" class="hover:text-white transition-colors">Tutorial</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank" class="hover:text-white transition-colors">GitHub</a></li>
+                        <li><a href="https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo" target="_blank" class="hover:text-white transition-colors">Demo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Z Image API. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
