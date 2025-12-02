@@ -72,7 +72,7 @@ if (pricingToggle) {
     });
 }
 
-// Waitlist form submission with Formspree support
+// Waitlist form submission
 const waitlistForm = document.getElementById('waitlistForm');
 const successMessage = document.getElementById('successMessage');
 
@@ -81,69 +81,49 @@ if (waitlistForm) {
         e.preventDefault();
         
         const submitBtn = document.getElementById('submitBtn');
-        const btnText = submitBtn.querySelector('.btn-text');
-        const btnLoading = submitBtn.querySelector('.btn-loading');
+        const btnText = document.getElementById('btnText');
+        const btnLoading = document.getElementById('btnLoading');
         
         // Show loading state
         submitBtn.disabled = true;
-        if (btnText) btnText.classList.add('hidden');
-        if (btnLoading) btnLoading.classList.remove('hidden');
+        btnText.classList.add('hidden');
+        btnLoading.classList.remove('hidden');
         
-        // Get form data
         const formData = new FormData(this);
         
         try {
-            // Submit to Formspree (or your custom endpoint)
-            const formAction = this.getAttribute('action');
-            
-            if (formAction && formAction.includes('formspree.io')) {
-                // Using Formspree
-                const response = await fetch(formAction, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Show success message
-                    this.classList.add('hidden');
-                    successMessage.classList.remove('hidden');
-                    
-                    // Store in localStorage for analytics (optional)
-                    const data = Object.fromEntries(formData);
-                    localStorage.setItem('waitlist_joined', 'true');
-                    console.log('Waitlist submission successful:', data.email);
-                } else {
-                    throw new Error('Form submission failed');
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
                 }
-            } else {
-                // Fallback: Store locally and show message
-                // This is useful for testing without Formspree setup
-                const data = Object.fromEntries(formData);
-                console.log('Waitlist data (stored locally):', data);
-                localStorage.setItem('waitlist_data', JSON.stringify(data));
-                
-                // Simulate delay
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                
+            });
+            
+            if (response.ok) {
                 // Show success message
                 this.classList.add('hidden');
                 successMessage.classList.remove('hidden');
                 
-                // Alert user that they need to set up Formspree
-                console.warn('⚠️ Form submitted locally only. Set up Formspree to receive emails.');
+                // Optional: Store submission status
+                localStorage.setItem('waitlist_joined', 'true');
+                localStorage.setItem('waitlist_timestamp', new Date().toISOString());
+            } else {
+                const data = await response.json();
+                if (data.errors) {
+                    throw new Error(data.errors.map(error => error.message).join(', '));
+                } else {
+                    throw new Error('Form submission failed');
+                }
             }
-            
         } catch (error) {
-            console.error('Error submitting form:', error);
-            alert('Something went wrong. Please try again or contact us directly.');
+            console.error('Form submission error:', error);
+            alert('Submission failed. Please try again or contact us directly.');
             
             // Reset button state
             submitBtn.disabled = false;
-            if (btnText) btnText.classList.remove('hidden');
-            if (btnLoading) btnLoading.classList.add('hidden');
+            btnText.classList.remove('hidden');
+            btnLoading.classList.add('hidden');
         }
     });
 }
@@ -182,66 +162,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Apply to sections (optional enhancement) - but skip waitlist form section
+// Apply fade-in animation to sections
 document.querySelectorAll('section').forEach(section => {
-    // Skip the waitlist section to prevent input issues
-    if (!section.id || section.id !== 'waitlist') {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    } else {
-        // Ensure waitlist section is always visible and interactive
-        section.style.opacity = '1';
-        section.style.transform = 'none';
-        section.style.pointerEvents = 'auto';
-    }
-});
-
-// Ensure all form inputs are interactive (extra safeguard)
-document.addEventListener('DOMContentLoaded', function() {
-    const waitlistSection = document.getElementById('waitlist');
-    if (waitlistSection) {
-        // Make entire section interactive first
-        waitlistSection.style.pointerEvents = 'auto';
-        waitlistSection.style.opacity = '1';
-        waitlistSection.style.transform = 'none';
-        
-        // Force all inputs, selects, and buttons in waitlist section to be interactive
-        const formElements = waitlistSection.querySelectorAll('input, select, button, textarea');
-        formElements.forEach(element => {
-            element.style.pointerEvents = 'auto';
-            element.style.opacity = '1';
-            element.style.userSelect = 'auto';
-            element.style.zIndex = '1001';
-            element.removeAttribute('disabled');
-            element.removeAttribute('readonly');
-            
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.style.cursor = 'text';
-                element.style.backgroundColor = 'white';
-            } else if (element.tagName === 'SELECT') {
-                element.style.cursor = 'pointer';
-                element.style.backgroundColor = 'white';
-            } else if (element.tagName === 'BUTTON') {
-                element.style.cursor = 'pointer';
-            }
-        });
-        
-        console.log('✅ Waitlist form initialized:', formElements.length, 'interactive elements');
-        
-        // Test focus capability
-        const firstInput = waitlistSection.querySelector('input[type="text"]');
-        if (firstInput) {
-            setTimeout(() => {
-                try {
-                    firstInput.focus();
-                    console.log('✅ Form input can receive focus');
-                } catch (e) {
-                    console.error('❌ Form input focus failed:', e);
-                }
-            }, 100);
-        }
-    }
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
 });
 
