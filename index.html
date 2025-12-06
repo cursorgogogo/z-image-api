@@ -657,14 +657,14 @@ print(f"Generated: {image_url}")</code></pre>
                 <div class="flex items-center justify-center gap-4 mb-12">
                     <span class="text-gray-700 font-medium">Self-Hosted</span>
                     <label class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" id="pricingToggle" class="sr-only peer">
+                        <input type="checkbox" id="pricingToggle" class="sr-only peer" checked>
                         <div class="w-14 h-7 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary-600"></div>
                     </label>
                     <span class="text-gray-700 font-medium">Managed API</span>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="selfHostedPricing">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto hidden" id="selfHostedPricing">
                 <div class="bg-white rounded-xl border-2 border-gray-200 p-8 hover:border-primary-300 transition-colors">
                     <div class="text-center mb-8 pb-8 border-b border-gray-200">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Open Source</h3>
@@ -768,7 +768,7 @@ print(f"Generated: {image_url}")</code></pre>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden" id="apiPricing">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="apiPricing">
                 <div class="bg-white rounded-xl border-2 border-gray-200 p-8 hover:border-primary-300 transition-colors">
                     <div class="text-center mb-8 pb-8 border-b border-gray-200">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Z-Image Basic</h3>
